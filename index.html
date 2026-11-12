@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7766B5">
+  <meta name="description" content="Youngseon Jung | Talent Acquisition Portfolio">
+  <title>Youngseon Jung | Talent Acquisition</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       COLOR ENTRY
+  ========================== -->
+
+  <section id="entry-screen" class="entry-screen">
+    <div class="entry-inner">
+
+      <header class="entry-header">
+        <a href="#" class="wordmark">YSJ<span>.</span></a>
+        <span class="entry-header-label">A PERSONAL TA PORTFOLIO · 2026</span>
+      </header>
+
+      <div class="entry-content">
+        <p class="eyebrow">A LITTLE DIFFERENT PORTFOLIO</p>
+
+        <h1>
+          YOUR COMPANY'S COLOR.<br>
+          <span>MY STORY.</span>
+        </h1>
+
+        <p class="entry-description">
+          Every organization has its own identity.<br>
+          Enter your company's color and explore my portfolio
+          in a color that feels familiar to you.
+        </p>
+
+        <div class="entry-form">
+          <label for="company-color">ENTER YOUR COMPANY'S COLOR</label>
+
+          <div class="color-input-row">
+            <input
+              type="text"
+              id="company-color"
+              placeholder="Try green, navy, sky blue..."
+              autocomplete="off"
+              list="color-suggestions"
+            >
+
+            <datalist id="color-suggestions">
+              <option value="green">
+              <option value="navy">
+              <option value="yellow">
+              <option value="blue">
+              <option value="dark green">
+              <option value="sky blue">
+              <option value="purple">
+              <option value="red">
+              <option value="pink">
+              <option value="orange">
+              <option value="black">
+              <option value="lavender">
+            </datalist>
+
+            <label class="color-picker-label" title="Choose a color">
+              <input
+                type="color"
+                id="color-picker"
+                value="#7766B5"
+                aria-label="Choose a company color"
+              >
+              <span>+</span>
+            </label>
+          </div>
+
+          <div class="color-preview-row">
+            <span id="color-dot"></span>
+            <span id="color-preview-name">Lavender</span>
+            <span id="color-hex">#7766B5</span>
+          </div>
+
+          <p id="color-error" class="error-message" aria-live="polite"></p>
+
+          <button id="enter-button" class="primary-button">
+            EXPLORE MY PORTFOLIO <span>↗</span>
+          </button>
+
+          <button id="default-button" class="text-button">
+            Or continue with my original theme
+          </button>
+        </div>
+      </div>
+
+      <footer class="entry-footer">
+        <span>PEOPLE FIRST, PROCESS PERFECT.</span>
+        <span>DESIGNED TO CONNECT.</span>
+      </footer>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       MAIN WEBSITE
+  ========================== -->
+
+  <div id="portfolio" class="portfolio hidden">
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+      <a href="#home" class="logo">YSJ<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#competencies">COMPETENCIES</a>
+        <a href="#perspective">PERSPECTIVE</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+
+      <button id="change-theme" class="theme-button">
+        <span class="theme-dot"></span>
+        CHANGE THEME
+      </button>
+
+      <button class="mobile-menu-button" id="mobile-menu-button"
+        aria-label="Open navigation" aria-expanded="false">
+        ☰
+      </button>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+          <p class="eyebrow">
+            TALENT ACQUISITION · PEOPLE & ORGANIZATION
+          </p>
+
+          <h1>
+            PEOPLE FIRST,<br>
+            <span>PROCESS PERFECT.</span>
+          </h1>
+
+          <p class="hero-description">
+            I believe that great recruitment begins with
+            understanding people and ends with meaningful experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#competencies" class="primary-button hero-button">
+              EXPLORE MY WORK <span>↓</span>
+            </a>
+            <a href="#about" class="secondary-link">
+              GET TO KNOW ME ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+
+          <div class="hero-circle">
+            <span class="circle-small">THE HUMAN SIDE OF</span>
+            <strong>HR</strong>
+            <span class="circle-small">TALENT ACQUISITION</span>
+          </div>
+
+          <div class="floating-note note-one">
+            <span>01</span>
+            Recruitment
+          </div>
+
+          <div class="floating-note note-two">
+            <span>02</span>
+            Experience
+          </div>
+
+          <div class="floating-note note-three">
+            <span>03</span>
+            Branding
+          </div>
+
+          <div class="floating-note note-four">
+            <span>04</span>
+            Onboarding
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-bottom">
+        <span>YOUNGSEON JUNG</span>
+        <span>SCROLL TO DISCOVER ↓</span>
+        <span>SEOUL, SOUTH KOREA</span>
+      </div>
+
+    </section>
+
+
+    <!-- QUICK PROFILE -->
+
+    <section class="quick-profile">
+      <div>
+        <span class="quick-number">4.45 / 4.50</span>
+        <span class="quick-label">ACADEMIC GPA</span>
+      </div>
+
+      <div>
+        <span class="quick-number">3</span>
+        <span class="quick-label">EDUCATIONAL INSTITUTIONS</span>
+      </div>
+
+      <div>
+        <span class="quick-number">4</span>
+        <span class="quick-label">CORE COMPETENCIES</span>
+      </div>
+
+      <div>
+        <span class="quick-number">∞</span>
+        <span class="quick-label">CURIOSITY ABOUT PEOPLE</span>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section about-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / ABOUT ME</p>
+          <h2>WHO I AM<span class="accent">.</span></h2>
+        </div>
+
+        <p class="section-subtitle">
+          A background shaped by people, society and global perspectives.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-story">
+          <p class="story-label">A LITTLE ABOUT ME</p>
+
+          <h3>
+            Understanding people<br>
+            is where my story begins.
+          </h3>
+
+          <p>
+            I studied History and Sociology to understand
+            how people think, interact and shape the world around them.
+          </p>
+
+          <p>
+            My international experiences at UBC and the University
+            of Edinburgh broadened my perspective and taught me
+            to communicate across different backgrounds.
+          </p>
+
+          <p>
+            Today, I bring these perspectives into Talent Acquisition:
+            understanding people, building reliable processes
+            and creating thoughtful experiences.
+          </p>
+
+          <div class="about-tags">
+            <span>People-oriented</span>
+            <span>Detail-driven</span>
+            <span>Global perspective</span>
+            <span>Continuous learner</span>
+          </div>
+        </div>
+
+
+        <div class="timeline-card">
+          <div class="timeline-heading">
+            <span>EDUCATION & GLOBAL EXPERIENCE</span>
+            <span>2026</span>
+          </div>
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <span class="timeline-marker"></span>
+              <div>
+                <span class="timeline-type">HIGH SCHOOL</span>
+                <h4>Goyang Global High School</h4>
+                <p>Graduated</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-marker"></span>
+              <div>
+                <span class="timeline-type">UNDERGRADUATE</span>
+                <h4>Ewha Womans University</h4>
+                <p>B.A. in History & Sociology</p>
+                <strong>GPA 4.45 / 4.50</strong>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-marker"></span>
+              <div>
+                <span class="timeline-type">EXCHANGE STUDENT · 2024</span>
+                <h4>The University of British Columbia</h4>
+                <p>Vancouver, Canada</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-marker"></span>
+              <div>
+                <span class="timeline-type">LANGUAGE PROGRAMME · 2025</span>
+                <h4>The University of Edinburgh</h4>
+                <p>Edinburgh, United Kingdom</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMPETENCIES -->
+
+    <section id="competencies" class="section competency-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / WHAT I CAN DO</p>
+          <h2>CORE COMPETENCIES<span class="accent">.</span></h2>
+        </div>
+
+        <p class="section-subtitle">
+          Explore my experiences through four dimensions of Talent Acquisition.
+        </p>
+      </div>
+
+
+      <div class="competency-tabs" id="competency-tabs">
+        <button class="filter-button active" data-filter="all">ALL</button>
+        <button class="filter-button" data-filter="recruitment">01 RECRUITMENT</button>
+        <button class="filter-button" data-filter="candidate">02 EXPERIENCE</button>
+        <button class="filter-button" data-filter="branding">03 BRANDING</button>
+        <button class="filter-button" data-filter="onboarding">04 ONBOARDING</button>
+      </div>
+
+
+      <div class="project-grid" id="project-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <div class="project-footer">
+        <span>CLICK ANY PROJECT TO EXPLORE THE DETAILS.</span>
+        <span id="project-count">0 PROJECTS</span>
+      </div>
+
+    </section>
+
+
+    <!-- RECRUITMENT JOURNEY -->
+
+    <section class="journey-section section">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / THE BIG PICTURE</p>
+          <h2>THE RECRUITMENT JOURNEY<span class="accent">.</span></h2>
+        </div>
+
+        <p class="section-subtitle">
+          From the first interaction to becoming part of an organization.
+        </p>
+      </div>
+
+      <div class="journey-track">
+
+        <div class="journey-step">
+          <span>01</span>
+          <div class="journey-icon">◎</div>
+          <h3>ATTRACT</h3>
+          <p>Build awareness and communicate organizational identity.</p>
+        </div>
+
+        <div class="journey-line"></div>
+
+        <div class="journey-step">
+          <span>02</span>
+          <div class="journey-icon">⌕</div>
+          <h3>SELECT</h3>
+          <p>Identify talent through fair and structured processes.</p>
+        </div>
+
+        <div class="journey-line"></div>
+
+        <div class="journey-step">
+          <span>03</span>
+          <div class="journey-icon">♡</div>
+          <h3>CONNECT</h3>
+          <p>Create positive experiences at every interaction.</p>
+        </div>
+
+        <div class="journey-line"></div>
+
+        <div class="journey-step">
+          <span>04</span>
+          <div class="journey-icon">↗</div>
+          <h3>GROW</h3>
+          <p>Help new members adapt and grow with the organization.</p>
+        </div>
+
+      </div>
+
+      <p class="journey-note">
+        MY VIEW OF TALENT ACQUISITION: A CONTINUOUS PEOPLE EXPERIENCE.
+      </p>
+
+    </section>
+
+
+    <!-- PHILOSOPHY -->
+
+    <section id="perspective" class="philosophy-section section">
+
+      <div class="philosophy-inner">
+
+        <div class="philosophy-heading">
+          <p class="eyebrow">04 / MY PERSPECTIVE</p>
+
+          <h2>
+            WHAT MAKES<br>
+            <span>GOOD RECRUITMENT?</span>
+          </h2>
+
+          <p>
+            Recruitment is not simply about filling a position.
+            It is about creating a meaningful connection
+            between people and organizations.
+          </p>
+        </div>
+
+
+        <div class="philosophy-interactive">
+
+          <p class="question-label">A QUESTION I OFTEN THINK ABOUT</p>
+
+          <h3 id="philosophy-question">
+            What does a candidate remember after an interview?
+          </h3>
+
+          <div class="answer-options">
+
+            <button class="answer-button" data-answer="a">
+              A. The questions they were asked
+            </button>
+
+            <button class="answer-button" data-answer="b">
+              B. How they were treated throughout the process
+            </button>
+
+            <button class="answer-button" data-answer="c">
+              C. Whether they received an answer quickly
+            </button>
+
+          </div>
+
+          <div id="philosophy-response" class="philosophy-response">
+            Choose an answer to explore my perspective.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="values-grid">
+
+        <div class="value-item">
+          <span>01</span>
+          <h3>THOUGHTFUL</h3>
+          <p>
+            Small details can make a meaningful difference
+            in someone's experience.
+          </p>
+        </div>
+
+        <div class="value-item">
+          <span>02</span>
+          <h3>RELIABLE</h3>
+          <p>
+            Good intentions become meaningful through
+            consistent and accurate execution.
+          </p>
+        </div>
+
+        <div class="value-item">
+          <span>03</span>
+          <h3>CURIOUS</h3>
+          <p>
+            Better processes begin with asking questions
+            and understanding different perspectives.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact-section section">
+
+      <p class="eyebrow">05 / LET'S CONNECT</p>
+
+      <h2>
+        PEOPLE MAKE<br>
+        <span>THE DIFFERENCE.</span>
+      </h2>
+
+      <p class="contact-description">
+        Thank you for taking the time to explore my story.<br>
+        I look forward to creating meaningful experiences together.
+      </p>
+
+      <a href="mailto:jyoungseon8@gmail.com" class="contact-email">
+        jyoungseon8@gmail.com ↗
+      </a>
+
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/youngseon/"
+           target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+
+        <a href="https://github.com/jyoungseon"
+           target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+
+        <a href="https://github.com/jyoungseon/hrdesign"
+           target="_blank" rel="noopener noreferrer">HR DESIGN ↗</a>
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <a href="#home" class="footer-logo">YSJ.</a>
+      <span>PEOPLE FIRST, PROCESS PERFECT.</span>
+      <span>© 2026 YOUNGSEON JUNG</span>
+    </footer>
+
+  </div>
+
+
+  <!-- =========================
+       PROJECT DETAIL MODAL
+  ========================== -->
+
+  <div id="project-modal" class="project-modal hidden"
+       role="dialog" aria-modal="true"
+       aria-labelledby="modal-title">
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="modal-panel">
+
+      <button id="modal-close" class="modal-close"
+              aria-label="Close project details">×</button>
+
+      <div id="modal-content">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <div class="modal-bottom">
+        <span>YOUNGSEON JUNG · TA PORTFOLIO</span>
+        <button id="modal-bottom-close">BACK TO PORTFOLIO ↑</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
