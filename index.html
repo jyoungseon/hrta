@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2864B8">
 <title>Youngseon Jung | Talent Acquisition Portfolio</title>
+
 <style>
 /* =========================================
    01. DESIGN SYSTEM
@@ -23,11 +24,14 @@
   --font: Arial, "Noto Sans KR", sans-serif;
   --content-width: 1120px;
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
+
 html {
   scroll-behavior:smooth;
   scroll-padding-top:85px;
 }
+
 body {
   font-family:var(--font);
   color:var(--ink);
@@ -35,21 +39,27 @@ body {
   line-height:1.7;
   overflow-x:hidden;
 }
+
 body.modal-open { overflow:hidden; }
+
 a { color:inherit; text-decoration:none; }
 button, input { font:inherit; }
 button { cursor:pointer; }
 .hidden { display:none !important; }
+
 .eyebrow {
   font-size:10px;
   font-weight:800;
   letter-spacing:2px;
   color:var(--brand-color);
 }
+
 .accent { color:var(--brand-color); }
+
 .section {
   padding:110px max(7%,calc((100% - var(--content-width))/2));
 }
+
 .section-heading {
   display:flex;
   justify-content:space-between;
@@ -57,426 +67,486 @@ button { cursor:pointer; }
   gap:30px;
   margin-bottom:45px;
 }
+
 .section-heading h2 {
   font-size:clamp(34px,5vw,52px);
   letter-spacing:-2px;
   line-height:1.2;
   margin-top:12px;
 }
+
 .section-subtitle {
   max-width:350px;
   font-size:12px;
   color:var(--muted);
   line-height:1.9;
 }
+
 .primary-button {
   display:inline-flex;
   justify-content:center;
   align-items:center;
-  gap:14px;
-  padding:14px 22px;
+  gap:13px;
+  padding:14px 21px;
   background:var(--brand-color);
   color:white;
   border:1px solid var(--brand-color);
   border-radius:5px;
-  font-size:11px;
+  font-size:10px;
   font-weight:800;
+  letter-spacing:.5px;
   transition:.25s;
 }
+
 .primary-button:hover {
   transform:translateY(-3px);
-  opacity:.88;
+  box-shadow:0 8px 20px rgba(35,25,55,.15);
 }
+
+.secondary-link {
+  font-size:10px;
+  font-weight:800;
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:5px;
+}
+
+button {
+  border:0;
+  background:none;
+}
+
 /* =========================================
-   02. COLOR ENTRY
+   02. ENTRY SCREEN
 ========================================= */
 .entry-screen {
   min-height:100vh;
-  padding:35px 7%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   background:var(--paper);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:30px 7%;
 }
+
 .entry-inner {
   width:100%;
-  max-width:850px;
-  min-height:650px;
+  max-width:var(--content-width);
+  margin:0 auto;
+  min-height:calc(100vh - 60px);
   display:flex;
   flex-direction:column;
   justify-content:space-between;
 }
+
 .entry-header,
 .entry-footer {
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-.wordmark {
-  font-size:24px;
-  font-weight:900;
-}
-.wordmark span { color:var(--brand-color); }
-.entry-header>span,
-.entry-footer {
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:1.3px;
-  color:var(--muted);
-}
-.entry-content {
-  max-width:660px;
-  margin:75px 0;
-}
-.entry-content h1 {
-  font-size:clamp(43px,7vw,75px);
-  letter-spacing:-3px;
-  line-height:1.1;
-  margin:24px 0;
-}
-.entry-content h1 span { color:var(--brand-color); }
-.entry-description {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.9;
-}
-.entry-form {
-  max-width:500px;
-  margin-top:45px;
-}
-.entry-form>label {
-  font-size:11px;
-  font-weight:800;
-}
-.color-input-row {
-  display:flex;
-  align-items:center;
-  margin-top:13px;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:10px 12px 10px 17px;
-  gap:12px;
-}
-.color-input-row:focus-within {
-  border-color:var(--brand-color);
-}
-.color-input-row input[type=text] {
-  flex:1;
-  min-width:0;
-  border:0;
-  outline:0;
-  font-size:13px;
-}
-.color-picker-label {
-  width:38px;
-  height:38px;
-  border-radius:6px;
-  background:var(--brand-color);
-  display:grid;
-  place-items:center;
-  color:white;
-  font-size:22px;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
-}
-.color-picker-label input {
-  position:absolute;
-  inset:-10px;
-  width:150%;
-  height:150%;
-  opacity:0;
-  cursor:pointer;
-}
-.color-preview-row {
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin-top:12px;
-  font-size:11px;
-  color:var(--muted);
-}
-#color-dot {
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:var(--brand-color);
-}
-#color-hex {
-  margin-left:auto;
-}
-.error-message {
-  color:#C13E4C;
-  font-size:11px;
-  min-height:20px;
-  margin-top:7px;
-}
-.entry-form .primary-button { width:100%; }
-.text-button {
-  display:block;
-  margin:16px auto 0;
-  background:transparent;
-  border:0;
-  color:var(--muted);
-  font-size:11px;
-  text-decoration:underline;
-}
-/* =========================================
-   03. NAVIGATION
-========================================= */
-.navbar {
-  height:74px;
-  padding:0 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(250,251,253,.95);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-}
-.logo {
-  font-size:25px;
-  font-weight:900;
-}
-.logo span { color:var(--brand-color); }
-.nav-links {
-  display:flex;
-  gap:24px;
-  align-items:center;
-}
-.nav-links a {
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:.6px;
-}
-.nav-links a:hover { color:var(--brand-color); }
-.theme-button {
-  border:1px solid var(--line);
-  background:white;
-  border-radius:30px;
-  padding:9px 14px;
-  font-size:9px;
-  font-weight:800;
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-.theme-dot {
-  width:10px;
-  height:10px;
-  background:var(--brand-color);
-  border-radius:50%;
-}
-.mobile-menu-button {
-  display:none;
-  background:none;
-  border:0;
-  font-size:22px;
-}
-/* =========================================
-   04. HERO
-========================================= */
-.hero {
-  min-height:620px;
-  padding:80px 7% 50px;
-  background:var(--brand-light);
-  position:relative;
-  overflow:hidden;
-}
-.hero-inner {
-  max-width:var(--content-width);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  align-items:center;
-  gap:25px;
-  min-height:450px;
-}
-.hero-copy h1 {
-  font-size:clamp(39px,5.3vw,68px);
-  line-height:1.25;
-  letter-spacing:-3px;
-  margin:25px 0;
-}
-.hero-copy h1 span { color:var(--brand-color); }
-.hero-description {
-  color:var(--muted);
-  font-size:13px;
-  line-height:2;
-}
-.hero-actions {
-  display:flex;
-  align-items:center;
-  gap:24px;
-  margin-top:32px;
-  flex-wrap:wrap;
-}
-.secondary-link {
-  font-size:10px;
-  font-weight:800;
-  border-bottom:1px solid var(--brand-color);
-  padding-bottom:5px;
-}
-.hero-visual {
-  min-height:380px;
-  position:relative;
-  display:grid;
-  place-items:center;
-}
-.hero-circle {
-  width:225px;
-  height:225px;
-  background:var(--brand-color);
-  color:white;
-  border-radius:50%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  z-index:2;
-  box-shadow:0 25px 70px rgba(40,100,184,.2);
-  animation:float 5s ease-in-out infinite;
-}
-.hero-circle strong {
-  font-size:95px;
-  line-height:1;
-  letter-spacing:-7px;
-}
-.circle-small {
-  font-size:8px;
-  letter-spacing:2px;
-}
-.hero-orbit {
-  position:absolute;
-  border:1px solid var(--brand-soft);
-  border-radius:50%;
-  width:315px;
-  height:315px;
-}
-.orbit-two {
-  width:385px;
-  height:385px;
-  border-style:dashed;
-  animation:rotate 35s linear infinite;
-}
-.floating-note {
-  position:absolute;
-  z-index:3;
-  background:white;
-  padding:10px 14px;
-  border-radius:6px;
-  box-shadow:0 8px 30px rgba(40,30,60,.09);
-  font-size:10px;
-  font-weight:700;
-  animation:float 5s ease-in-out infinite;
-}
-.floating-note span {
-  color:var(--brand-color);
-  margin-right:7px;
-}
-.note-one { top:25px; left:0; }
-.note-two { top:100px; right:-5px; animation-delay:.5s; }
-.note-three { bottom:80px; left:-10px; animation-delay:1s; }
-.note-four { bottom:25px; right:15px; animation-delay:1.5s; }
-.hero-bottom {
-  max-width:var(--content-width);
-  margin:35px auto 0;
-  padding-top:18px;
-  border-top:1px solid var(--brand-soft);
-  display:flex;
-  justify-content:space-between;
+  gap:20px;
   font-size:9px;
   font-weight:800;
   letter-spacing:1px;
   color:var(--muted);
 }
+
+.wordmark {
+  font-size:25px;
+  font-weight:900;
+  color:var(--brand-color);
+  letter-spacing:-1px;
+}
+
+.wordmark span,
+.logo span { color:var(--brand-color); }
+
+.entry-content {
+  width:100%;
+  max-width:650px;
+  margin:80px auto;
+}
+
+.entry-content h1 {
+  font-size:clamp(48px,8vw,85px);
+  line-height:1.02;
+  letter-spacing:-4px;
+  margin:25px 0;
+}
+
+.entry-content h1 span { color:var(--brand-color); }
+
+.entry-description {
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+
+.entry-form {
+  margin-top:45px;
+  max-width:510px;
+}
+
+.entry-form>label {
+  display:block;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.color-input-row {
+  display:flex;
+  gap:9px;
+}
+
+.color-input-row input[type="text"] {
+  flex:1;
+  min-width:0;
+  height:48px;
+  border:1px solid var(--line);
+  border-radius:5px;
+  background:white;
+  padding:0 15px;
+  font-size:12px;
+  outline:none;
+}
+
+.color-input-row input[type="text"]:focus {
+  border-color:var(--brand-color);
+}
+
+.color-picker-label {
+  width:48px;
+  height:48px;
+  border:1px solid var(--line);
+  border-radius:5px;
+  display:grid;
+  place-items:center;
+  background:white;
+  color:var(--brand-color);
+  font-size:23px;
+  cursor:pointer;
+  position:relative;
+}
+
+.color-picker-label input {
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+.color-preview-row {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:13px;
+  font-size:10px;
+  font-weight:700;
+}
+
+#color-dot {
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--brand-color);
+}
+
+#color-hex { color:var(--muted); }
+
+.error-message {
+  min-height:18px;
+  margin-top:7px;
+  color:#D94A4A;
+  font-size:10px;
+}
+
+#enter-button {
+  width:100%;
+  margin-top:10px;
+}
+
+.text-button {
+  display:block;
+  margin:16px auto 0;
+  font-size:9px;
+  font-weight:700;
+  color:var(--muted);
+  text-decoration:underline;
+}
+
+/* =========================================
+   03. NAVIGATION
+========================================= */
+.portfolio { min-height:100vh; }
+
+.navbar {
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(12px);
+}
+
+.logo {
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px;
+  color:var(--ink);
+}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:23px;
+}
+
+.nav-links a {
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.6px;
+  color:var(--muted);
+  transition:.2s;
+}
+
+.nav-links a:hover { color:var(--brand-color); }
+
+.theme-button {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  font-size:9px;
+  font-weight:800;
+  color:var(--ink);
+}
+
+.theme-dot {
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--brand-color);
+}
+
+.mobile-menu-button {
+  display:none;
+  font-size:22px;
+  color:var(--ink);
+}
+
+/* =========================================
+   04. HERO
+========================================= */
+.hero {
+  padding:85px 7% 35px;
+  background:var(--paper);
+}
+
+.hero-inner {
+  max-width:var(--content-width);
+  margin:0 auto;
+  min-height:470px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:35px;
+}
+
+.hero-copy h1 {
+  font-size:clamp(43px,6vw,68px);
+  letter-spacing:-3px;
+  line-height:1.17;
+  margin:24px 0;
+}
+
+.hero-copy h1 span { color:var(--brand-color); }
+
+.hero-description {
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
+
+.hero-visual {
+  min-height:390px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-orbit {
+  position:absolute;
+  width:310px;
+  height:310px;
+  border:1px solid var(--brand-soft);
+  border-radius:50%;
+  animation:rotate 30s linear infinite;
+}
+
+.orbit-two {
+  width:390px;
+  height:390px;
+  border-style:dashed;
+  animation-direction:reverse;
+}
+
+.hero-circle {
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  background:var(--brand-color);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 25px 60px rgba(35,25,55,.15);
+  z-index:2;
+  animation:float 5s ease-in-out infinite;
+}
+
+.hero-circle strong {
+  font-size:88px;
+  line-height:1.1;
+  letter-spacing:-5px;
+}
+
+.circle-small {
+  font-size:9px;
+  letter-spacing:3px;
+  font-weight:800;
+}
+
+.floating-note {
+  position:absolute;
+  background:white;
+  padding:10px 13px;
+  border:1px solid var(--line);
+  border-radius:5px;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.5px;
+  box-shadow:0 5px 18px rgba(35,25,55,.06);
+  z-index:3;
+}
+
+.floating-note span {
+  color:var(--brand-color);
+  margin-right:5px;
+}
+
+.note-one { top:15%; left:3%; }
+.note-two { top:28%; right:0; }
+.note-three { bottom:23%; left:0; }
+.note-four { bottom:12%; right:4%; }
+
+.hero-bottom {
+  max-width:var(--content-width);
+  margin:45px auto 0;
+  padding-top:17px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  color:var(--muted);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
 /* =========================================
    05. QUICK PROFILE
 ========================================= */
 .quick-profile {
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  padding:32px 7%;
-  border-bottom:1px solid var(--line);
+  padding:28px 7%;
   background:white;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
+
 .quick-profile>div {
-  padding:8px 15px;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
+  gap:4px;
   border-right:1px solid var(--line);
 }
+
 .quick-profile>div:last-child { border:0; }
+
 .quick-number {
+  font-size:22px;
+  font-weight:900;
   color:var(--brand-color);
-  font-size:26px;
-  font-weight:800;
 }
+
 .quick-label {
+  font-size:8px;
   color:var(--muted);
-  font-size:9px;
-  font-weight:700;
+  font-weight:800;
+  letter-spacing:1px;
 }
+
 /* =========================================
    06. ABOUT
 ========================================= */
-.about-section { background:var(--paper); }
+.about-section { background:white; }
+
 .about-grid {
   display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:60px;
+  grid-template-columns:1fr .85fr;
+  gap:65px;
   align-items:start;
 }
+
 .story-label {
   font-size:9px;
   font-weight:800;
   color:var(--brand-color);
-  letter-spacing:1.5px;
+  letter-spacing:1px;
+  margin-bottom:15px;
 }
+
 .about-story h3 {
-  font-size:32px;
-  letter-spacing:-1.3px;
-  line-height:1.4;
-  margin:18px 0 23px;
+  font-size:26px;
+  line-height:1.5;
+  letter-spacing:-1px;
+  margin-bottom:22px;
 }
+
 .about-story>p:not(.story-label) {
   font-size:12px;
-  line-height:2;
   color:var(--muted);
+  line-height:2;
   margin-bottom:15px;
 }
-.about-tags {
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:25px;
-}
-.about-tags span {
-  background:var(--brand-light);
-  color:var(--brand-color);
-  border-radius:30px;
-  padding:7px 12px;
-  font-size:9px;
-  font-weight:700;
-}
-</style>
-</head>
 
-   
-  margin-bottom:15px;
-}
 .about-tags {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
   margin-top:25px;
 }
+
 .about-tags span {
   background:var(--brand-light);
   color:var(--brand-color);
@@ -485,12 +555,14 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:700;
 }
+
 .timeline-card {
   background:white;
   border:1px solid var(--line);
   border-radius:12px;
   padding:28px;
 }
+
 .timeline-heading {
   display:flex;
   justify-content:space-between;
@@ -500,15 +572,19 @@ button { cursor:pointer; }
   color:var(--brand-color);
   margin-bottom:24px;
 }
+
 .timeline {
   border-left:1px solid var(--brand-soft);
   margin-left:5px;
 }
+
 .timeline-item {
   padding:0 0 25px 24px;
   position:relative;
 }
+
 .timeline-item:last-child { padding-bottom:0; }
+
 .timeline-marker {
   position:absolute;
   left:-5px;
@@ -519,29 +595,38 @@ button { cursor:pointer; }
   background:var(--brand-color);
   box-shadow:0 0 0 4px var(--brand-light);
 }
+
 .timeline-type {
   color:var(--brand-color);
   font-size:8px;
   font-weight:800;
   letter-spacing:1px;
 }
+
 .timeline-item h4 {
   font-size:13px;
   margin:5px 0;
 }
+
 .timeline-item p {
   font-size:11px;
   color:var(--muted);
 }
+
 .timeline-item strong {
   font-size:11px;
   color:var(--brand-color);
 }
+
 /* =========================================
    07. EXPERIENCE
 ========================================= */
 .experience-section { background:white; }
-.experience-list { border-top:1px solid var(--line); }
+
+.experience-list {
+  border-top:1px solid var(--line);
+}
+
 .experience-item {
   display:grid;
   grid-template-columns:180px 1fr;
@@ -550,52 +635,70 @@ button { cursor:pointer; }
   padding:20px 4px;
   border-bottom:1px solid var(--line);
 }
+
 .experience-period {
   color:var(--muted);
   font-size:11px;
   font-weight:700;
   white-space:nowrap;
 }
-.experience-main h3 { font-size:13px; margin-bottom:5px; }
-.experience-main p { color:var(--muted); font-size:10px; line-height:1.8; }
+
+.experience-main h3 {
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.experience-main p {
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.8;
+}
+
 /* =========================================
    08. COMPETENCIES
 ========================================= */
 .competency-section { background:#F3F6FA; }
+
 .competency-intro {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
   margin-bottom:35px;
 }
+
 .competency-intro>div {
   background:white;
   border:1px solid var(--line);
   border-radius:8px;
   padding:19px 16px;
 }
+
 .competency-intro strong {
   display:block;
   color:var(--brand-color);
   font-size:22px;
 }
+
 .competency-intro span {
   display:block;
   font-size:9px;
   font-weight:800;
   margin:8px 0;
 }
+
 .competency-intro p {
   font-size:10px;
   color:var(--muted);
   line-height:1.7;
 }
+
 .competency-tabs {
   display:flex;
   flex-wrap:wrap;
   gap:9px;
   margin-bottom:30px;
 }
+
 .filter-button {
   border:1px solid #DDE4ED;
   background:transparent;
@@ -606,17 +709,20 @@ button { cursor:pointer; }
   font-weight:800;
   transition:.2s;
 }
+
 .filter-button:hover,
 .filter-button.active {
   background:var(--brand-color);
   color:white;
   border-color:var(--brand-color);
 }
+
 .project-grid {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:18px;
 }
+
 .project-card {
   background:white;
   border:1px solid var(--line);
@@ -627,11 +733,13 @@ button { cursor:pointer; }
   display:flex;
   flex-direction:column;
 }
+
 .project-card:hover {
   transform:translateY(-5px);
   border-color:var(--brand-color);
   box-shadow:0 15px 35px rgba(35,25,55,.08);
 }
+
 .project-image {
   height:165px;
   background:var(--brand-light);
@@ -640,6 +748,7 @@ button { cursor:pointer; }
   position:relative;
   overflow:hidden;
 }
+
 .project-image-art {
   width:105px;
   height:105px;
@@ -651,9 +760,11 @@ button { cursor:pointer; }
   font-size:39px;
   transition:.5s;
 }
+
 .project-card:hover .project-image-art {
   transform:scale(1.12) rotate(10deg);
 }
+
 .project-index {
   position:absolute;
   left:16px;
@@ -662,6 +773,7 @@ button { cursor:pointer; }
   font-weight:800;
   color:var(--brand-color);
 }
+
 .project-category-label {
   position:absolute;
   right:14px;
@@ -673,34 +785,40 @@ button { cursor:pointer; }
   font-size:8px;
   font-weight:800;
 }
+
 .project-content {
   padding:22px;
   display:flex;
   flex-direction:column;
   flex:1;
 }
+
 .project-type {
   font-size:9px;
   font-weight:800;
   color:var(--brand-color);
 }
+
 .project-content h3 {
   font-size:18px;
   letter-spacing:-.5px;
   line-height:1.45;
   margin:10px 0;
 }
+
 .project-content>p {
   font-size:11px;
   color:var(--muted);
   line-height:1.8;
 }
+
 .project-result {
   color:var(--brand-color);
   font-size:10px;
   font-weight:800;
   margin-top:14px;
 }
+
 .project-card-bottom {
   border-top:1px solid var(--line);
   margin-top:18px;
@@ -711,10 +829,12 @@ button { cursor:pointer; }
   font-weight:800;
   color:var(--muted);
 }
+
 .project-card-bottom strong {
   color:var(--brand-color);
   font-size:17px;
 }
+
 .project-footer {
   margin-top:25px;
   padding-top:17px;
@@ -725,15 +845,18 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
+
 /* =========================================
    09. TOOLS
 ========================================= */
 .tools-section { background:white; }
+
 .tools-grid {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:15px;
 }
+
 .tool-card {
   border:1px solid var(--line);
   border-radius:9px;
@@ -741,16 +864,19 @@ button { cursor:pointer; }
   background:white;
   transition:.2s;
 }
+
 .tool-card:hover {
   transform:translateY(-3px);
   border-color:var(--brand-color);
 }
+
 .tool-card-heading {
   display:flex;
   align-items:center;
   gap:13px;
   margin-bottom:18px;
 }
+
 .tool-icon {
   width:42px;
   height:42px;
@@ -761,18 +887,22 @@ button { cursor:pointer; }
   place-items:center;
   font-size:22px;
 }
+
 .tool-card h3 { font-size:14px; }
+
 .tool-card-heading p {
   font-size:8px;
   color:var(--muted);
   letter-spacing:1px;
   font-weight:800;
 }
+
 .tool-tags {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
 }
+
 .tool-tags span {
   background:#F5F7FA;
   border:1px solid var(--line);
@@ -780,25 +910,30 @@ button { cursor:pointer; }
   border-radius:5px;
   font-size:10px;
 }
+
 /* =========================================
    10. TA JOURNEY
 ========================================= */
 .journey-section { background:white; }
+
 .journey-track {
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
   gap:10px;
 }
+
 .journey-step {
   flex:1;
   text-align:center;
 }
+
 .journey-step>span {
   font-size:10px;
   color:var(--brand-color);
   font-weight:800;
 }
+
 .journey-icon {
   width:72px;
   height:72px;
@@ -811,15 +946,18 @@ button { cursor:pointer; }
   font-size:29px;
   transition:.3s;
 }
+
 .journey-step:hover .journey-icon {
   background:var(--brand-color);
   color:white;
   transform:translateY(-5px);
 }
+
 .journey-step h3 {
   font-size:11px;
   letter-spacing:1px;
 }
+
 .journey-step p {
   max-width:175px;
   margin:9px auto;
@@ -827,12 +965,14 @@ button { cursor:pointer; }
   color:var(--muted);
   line-height:1.8;
 }
+
 .journey-line {
   flex:.35;
   height:1px;
   background:var(--brand-soft);
   margin-top:65px;
 }
+
 /* =========================================
    11. PHILOSOPHY
 ========================================= */
@@ -840,48 +980,61 @@ button { cursor:pointer; }
   background:var(--brand-color);
   color:white;
 }
-.philosophy-section .eyebrow { color:white; opacity:.8; }
+
+.philosophy-section .eyebrow {
+  color:white;
+  opacity:.8;
+}
+
 .philosophy-inner {
   display:grid;
   grid-template-columns:1fr .9fr;
   gap:60px;
   align-items:center;
 }
+
 .philosophy-heading h2 {
   font-size:clamp(36px,5vw,58px);
   line-height:1.25;
   letter-spacing:-2px;
   margin:23px 0;
 }
+
 .philosophy-heading h2 span { color:var(--brand-light); }
+
 .philosophy-heading>p:last-child {
   font-size:12px;
   line-height:2;
   opacity:.88;
   max-width:430px;
 }
+
 .philosophy-interactive {
   background:white;
   color:var(--ink);
   border-radius:10px;
   padding:28px;
 }
+
 .question-label {
   color:var(--brand-color);
   font-size:9px;
   font-weight:800;
   letter-spacing:1px;
 }
+
 .philosophy-interactive h3 {
   font-size:21px;
   line-height:1.5;
   margin:16px 0 20px;
 }
+
 .answer-options {
   display:flex;
   flex-direction:column;
   gap:9px;
 }
+
 .answer-button {
   text-align:left;
   border:1px solid var(--line);
@@ -892,12 +1045,14 @@ button { cursor:pointer; }
   color:var(--ink);
   transition:.2s;
 }
+
 .answer-button:hover,
 .answer-button.selected {
   border-color:var(--brand-color);
   background:var(--brand-light);
   color:var(--brand-color);
 }
+
 .philosophy-response {
   background:var(--brand-light);
   border-radius:6px;
@@ -907,19 +1062,35 @@ button { cursor:pointer; }
   margin-top:16px;
   min-height:65px;
 }
+
 .values-grid {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:25px;
   margin-top:75px;
 }
+
 .value-item {
   border-top:1px solid rgba(255,255,255,.4);
   padding-top:18px;
 }
-.value-item>span { font-size:10px; opacity:.7; }
-.value-item h3 { font-size:17px; margin:12px 0; }
-.value-item p { font-size:10px; line-height:1.9; opacity:.85; }
+
+.value-item>span {
+  font-size:10px;
+  opacity:.7;
+}
+
+.value-item h3 {
+  font-size:17px;
+  margin:12px 0;
+}
+
+.value-item p {
+  font-size:10px;
+  line-height:1.9;
+  opacity:.85;
+}
+
 /* =========================================
    12. CONTACT
 ========================================= */
@@ -928,18 +1099,22 @@ button { cursor:pointer; }
   padding-top:120px;
   padding-bottom:120px;
 }
+
 .contact-section h2 {
   font-size:clamp(37px,6vw,68px);
   line-height:1.25;
   letter-spacing:-3px;
   margin:25px 0;
 }
+
 .contact-section h2 span { color:var(--brand-color); }
+
 .contact-description {
   font-size:12px;
   line-height:2;
   color:var(--muted);
 }
+
 .contact-email {
   display:inline-block;
   font-size:18px;
@@ -949,6 +1124,7 @@ button { cursor:pointer; }
   padding-bottom:6px;
   margin-top:30px;
 }
+
 .contact-socials {
   display:flex;
   justify-content:center;
@@ -956,12 +1132,15 @@ button { cursor:pointer; }
   margin-top:35px;
   flex-wrap:wrap;
 }
+
 .contact-socials a {
   font-size:9px;
   font-weight:800;
   letter-spacing:.7px;
 }
+
 .contact-socials a:hover { color:var(--brand-color); }
+
 .footer {
   border-top:1px solid var(--line);
   padding:25px 7%;
@@ -972,10 +1151,12 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
+
 .footer-logo {
   font-size:23px;
   color:var(--brand-color);
 }
+
 /* =========================================
    13. PROJECT DETAIL MODAL
 ========================================= */
@@ -988,12 +1169,14 @@ button { cursor:pointer; }
   align-items:flex-start;
   padding:30px 14px;
 }
+
 .modal-overlay {
   position:absolute;
   inset:0;
   background:rgba(25,30,40,.72);
   backdrop-filter:blur(5px);
 }
+
 .modal-panel {
   position:relative;
   z-index:2;
@@ -1005,6 +1188,7 @@ button { cursor:pointer; }
   border-radius:12px;
   animation:modalIn .3s ease;
 }
+
 .modal-close {
   position:sticky;
   top:13px;
@@ -1019,25 +1203,30 @@ button { cursor:pointer; }
   font-size:23px;
   z-index:5;
 }
+
 .modal-hero {
   padding:60px 50px 38px;
   background:var(--brand-light);
 }
+
 .modal-category {
   font-size:9px;
   font-weight:800;
   letter-spacing:1px;
   color:var(--brand-color);
 }
+
 .modal-hero h2 {
   font-size:clamp(27px,4.5vw,40px);
   line-height:1.3;
   margin:17px 0;
 }
+
 .modal-hero>p {
   font-size:12px;
   color:var(--muted);
 }
+
 .modal-meta {
   display:flex;
   flex-wrap:wrap;
@@ -1045,60 +1234,79 @@ button { cursor:pointer; }
   margin-top:22px;
   font-size:10px;
 }
+
 .modal-meta span { color:var(--muted); }
-.modal-meta strong { color:var(--ink); margin-left:5px; }
+
+.modal-meta strong {
+  color:var(--ink);
+  margin-left:5px;
+}
+
 .modal-body { padding:40px 50px; }
+
 .modal-summary {
   font-size:14px;
   line-height:1.9;
   margin-bottom:30px;
 }
+
 .modal-stats {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:11px;
   margin:25px 0 40px;
 }
+
 .modal-stat {
   padding:18px 12px;
   background:white;
   border:1px solid var(--line);
   border-radius:7px;
 }
+
 .modal-stat strong {
   display:block;
   font-size:23px;
   color:var(--brand-color);
 }
+
 .modal-stat span {
   font-size:9px;
   color:var(--muted);
 }
+
 .detail-block {
   border-top:1px solid var(--line);
   padding:24px 0;
 }
+
 .detail-block h3 {
   font-size:12px;
   margin-bottom:12px;
 }
+
 .detail-block h3 span {
   color:var(--brand-color);
   margin-right:8px;
 }
+
 .detail-block p,
 .detail-block li {
   font-size:12px;
   line-height:2;
   color:var(--muted);
 }
+
 .detail-block ul { padding-left:18px; }
+
 .detail-block li { margin:5px 0; }
+
 .detail-tools {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
 }
+
 .detail-tools span {
   border-radius:30px;
   padding:7px 11px;
@@ -1107,6 +1315,7 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
+
 .project-external-link {
   display:inline-flex;
   padding:11px 16px;
@@ -1116,6 +1325,7 @@ button { cursor:pointer; }
   font-size:10px;
   font-weight:800;
 }
+
 .modal-bottom {
   display:flex;
   justify-content:space-between;
@@ -1126,6 +1336,7 @@ button { cursor:pointer; }
   color:var(--muted);
   font-weight:800;
 }
+
 .modal-bottom button {
   border:0;
   background:transparent;
@@ -1133,6 +1344,7 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
+
 /* =========================================
    14. ANIMATION & RESPONSIVE
 ========================================= */
@@ -1140,49 +1352,91 @@ button { cursor:pointer; }
   0%,100% { transform:translateY(0); }
   50% { transform:translateY(-10px); }
 }
+
 @keyframes rotate {
   to { transform:rotate(360deg); }
 }
+
 @keyframes modalIn {
-  from { opacity:0; transform:translateY(18px); }
-  to { opacity:1; transform:translateY(0); }
+  from {
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
 }
+
 .reveal {
   opacity:0;
   transform:translateY(22px);
   transition:.6s ease;
 }
+
 .reveal.visible {
   opacity:1;
   transform:translateY(0);
 }
+
 button:focus-visible,
 a:focus-visible,
 .project-card:focus-visible {
   outline:3px solid var(--brand-color);
   outline-offset:4px;
 }
+
+/* Desktop font size adjustment only */
 @media(min-width:901px) {
-  .section-subtitle { font-size:calc(12px + .5pt); }
-  .tool-tags span { font-size:calc(10px + .5pt); }
+  .section-subtitle {
+    font-size:calc(12px + .5pt);
+  }
+
+  .tool-tags span {
+    font-size:calc(10px + .5pt);
+  }
 }
+
 @media(max-width:900px) {
-  .about-grid,.philosophy-inner { grid-template-columns:1fr; gap:38px; }
-  .competency-intro { grid-template-columns:repeat(2,1fr); }
-  .experience-item { grid-template-columns:150px 1fr; }
+  .about-grid,
+  .philosophy-inner {
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+
+  .competency-intro {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .experience-item {
+    grid-template-columns:150px 1fr;
+  }
 }
+
 @media(max-width:650px) {
-  .section { padding:72px 6%; }
+  .section {
+    padding:72px 6%;
+  }
+
   .section-heading {
     flex-direction:column;
     align-items:flex-start;
     gap:12px;
   }
+
   .entry-screen { padding:24px 6%; }
+
   .entry-content { margin:60px 0; }
+
   .entry-content h1 { letter-spacing:-2px; }
-  .navbar { padding:0 6%; height:64px; }
+
+  .navbar {
+    padding:0 6%;
+    height:64px;
+  }
+
   .mobile-menu-button { display:block; }
+
   .nav-links {
     display:none;
     position:absolute;
@@ -1196,81 +1450,40 @@ a:focus-visible,
     align-items:flex-start;
     gap:18px;
   }
+
   .nav-links.open { display:flex; }
-  .theme-button { margin-left:auto; margin-right:13px; }
+
+  .theme-button {
+    margin-left:auto;
+    margin-right:13px;
+  }
+
   .hero { padding:60px 6% 32px; }
+
   .hero-inner { grid-template-columns:1fr; }
+
   .hero-copy h1 {
     font-size:42px;
     letter-spacing:-2px;
   }
-  .hero-visual { min-height:310px; }
-  .hero-orbit { width:260px; height:260px; }
-  .orbit-two { width:310px; height:310px; }
-  .hero-circle { width:165px; height:165px; }
-  .hero-circle strong { font-size:68px; }
-  .quick-profile {
-    grid-template-columns:repeat(2,1fr);
-    padding:23px 5%;
-  }
-  .quick-profile>div:nth-child(2) { border-right:0; }
-  .project-grid,.tools-grid { grid-template-columns:1fr; }
-  .journey-track {
-    flex-direction:column;
-    gap:15px;
-  }
-  .journey-step {
-    width:100%;
-    display:grid;
-    grid-template-columns:35px 52px 1fr;
-    align-items:center;
-    text-align:left;
-    gap:8px;
-  }
-  .journey-icon {
-    width:45px;
-    height:45px;
-    margin:0;
-    font-size:22px;
-    grid-row:1/3;
-  }
-  .journey-step>span { grid-row:1/3; }
-  .journey-step h3,.journey-step p { grid-column:3; }
-  .journey-step p { margin:0; max-width:none; }
-  .journey-line { display:none; }
-  .values-grid { grid-template-columns:repeat(2,1fr); gap:20px; }
-  .contact-section h2 {
-    font-size:38px;
-    letter-spacing:-1.5px;
-  }
-  .footer { flex-wrap:wrap; gap:10px; }
-  .project-modal { padding:10px 7px; }
-  .modal-panel { max-height:calc(100vh - 20px); }
-  .modal-hero { padding:52px 23px 28px; }
-  .modal-body { padding:27px 23px; }
-  .modal-stats { gap:7px; }
-  .modal-stat { padding:13px 7px; }
-  .modal-stat strong { font-size:18px; }
-  .modal-bottom { padding:16px 22px; }
-}
-@media(prefers-reduced-motion:reduce) {
-  *,*::before,*::after {
-    scroll-behavior:auto!important;
-    animation-duration:.01ms!important;
-    transition-duration:.01ms!important;
-  }
-}
-</style>
-
-   
-  }
 
   .hero-visual { min-height:310px; }
 
-  .hero-orbit { width:260px; height:260px; }
-  .orbit-two { width:310px; height:310px; }
+  .hero-orbit {
+    width:260px;
+    height:260px;
+  }
 
-  .hero-circle { width:165px; height:165px; }
+  .orbit-two {
+    width:310px;
+    height:310px;
+  }
+
+  .hero-circle {
+    width:165px;
+    height:165px;
+  }
+
   .hero-circle strong { font-size:68px; }
 
   .quick-profile {
@@ -1280,8 +1493,15 @@ a:focus-visible,
 
   .quick-profile>div:nth-child(2) { border-right:0; }
 
-  .project-grid,.tools-grid { grid-template-columns:1fr; }
-  .experience-item { grid-template-columns:1fr; gap:7px; }
+  .project-grid,
+  .tools-grid {
+    grid-template-columns:1fr;
+  }
+
+  .experience-item {
+    grid-template-columns:1fr;
+    gap:7px;
+  }
 
   .journey-track {
     flex-direction:column;
@@ -1306,34 +1526,57 @@ a:focus-visible,
   }
 
   .journey-step>span { grid-row:1/3; }
-  .journey-step h3,.journey-step p { grid-column:3; }
-  .journey-step p { margin:0; max-width:none; }
+
+  .journey-step h3,
+  .journey-step p {
+    grid-column:3;
+  }
+
+  .journey-step p {
+    margin:0;
+    max-width:none;
+  }
+
   .journey-line { display:none; }
 
-  .values-grid { grid-template-columns:repeat(2,1fr); gap:20px; }
+  .values-grid {
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
 
   .contact-section h2 {
     font-size:38px;
     letter-spacing:-1.5px;
   }
 
-  .footer { flex-wrap:wrap; gap:10px; }
+  .footer {
+    flex-wrap:wrap;
+    gap:10px;
+  }
 
   .project-modal { padding:10px 7px; }
-  .modal-panel { max-height:calc(100vh - 20px); }
+
+  .modal-panel {
+    max-height:calc(100vh - 20px);
+  }
 
   .modal-hero { padding:52px 23px 28px; }
+
   .modal-body { padding:27px 23px; }
 
   .modal-stats { gap:7px; }
+
   .modal-stat { padding:13px 7px; }
+
   .modal-stat strong { font-size:18px; }
 
   .modal-bottom { padding:16px 22px; }
 }
 
 @media(prefers-reduced-motion:reduce) {
-  *,*::before,*::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior:auto!important;
     animation-duration:.01ms!important;
     transition-duration:.01ms!important;
@@ -1347,7 +1590,6 @@ a:focus-visible,
 <!-- =====================================
      COLOR ENTRY
 ===================================== -->
-
 <section id="entry-screen" class="entry-screen">
   <div class="entry-inner">
 
@@ -1357,7 +1599,6 @@ a:focus-visible,
     </header>
 
     <main class="entry-content">
-
       <p class="eyebrow">A PORTFOLIO THAT SPEAKS YOUR BRAND</p>
 
       <h1>ENTER YOUR<br><span>COMPANY'S COLOR.</span></h1>
@@ -1368,11 +1609,9 @@ a:focus-visible,
       </p>
 
       <div class="entry-form">
-
         <label for="company-color">ENTER A COLOR NAME OR HEX CODE</label>
 
         <div class="color-input-row">
-
           <input
             id="company-color"
             type="text"
@@ -1400,7 +1639,6 @@ a:focus-visible,
             <input type="color" id="color-picker" value="#2864B8">
             +
           </label>
-
         </div>
 
         <div class="color-preview-row">
@@ -1418,7 +1656,6 @@ a:focus-visible,
         <button id="default-button" class="text-button">
           Continue with default blue
         </button>
-
       </div>
     </main>
 
@@ -1434,11 +1671,9 @@ a:focus-visible,
 <!-- =====================================
      MAIN PORTFOLIO
 ===================================== -->
-
 <div id="portfolio" class="portfolio hidden">
 
   <nav class="navbar">
-
     <a href="#home" class="logo">YSJ<span>.</span></a>
 
     <div class="nav-links">
@@ -1457,18 +1692,14 @@ a:focus-visible,
     <button id="mobile-menu-button" class="mobile-menu-button">
       ☰
     </button>
-
   </nav>
 
 
   <!-- HERO -->
-
   <section id="home" class="hero">
-
     <div class="hero-inner">
 
       <div class="hero-copy">
-
         <p class="eyebrow">
           TALENT ACQUISITION · PEOPLE & ORGANIZATION
         </p>
@@ -1485,7 +1716,6 @@ a:focus-visible,
         </p>
 
         <div class="hero-actions">
-
           <a href="#competencies" class="primary-button">
             Explore My Competencies ↓
           </a>
@@ -1493,14 +1723,10 @@ a:focus-visible,
           <a href="#about" class="secondary-link">
             About Me ↗
           </a>
-
         </div>
-
       </div>
 
-
       <div class="hero-visual">
-
         <div class="hero-orbit orbit-one"></div>
         <div class="hero-orbit orbit-two"></div>
 
@@ -1525,7 +1751,6 @@ a:focus-visible,
         <div class="floating-note note-four">
           <span>04</span> BRANDING
         </div>
-
       </div>
 
     </div>
@@ -1535,14 +1760,11 @@ a:focus-visible,
       <span>SCROLL TO DISCOVER ↓</span>
       <span>SEOUL, SOUTH KOREA</span>
     </div>
-
   </section>
 
 
   <!-- QUICK PROFILE -->
-
   <section class="quick-profile">
-
     <div>
       <span class="quick-number">4.45 / 4.50</span>
       <span class="quick-label">GPA</span>
@@ -1562,16 +1784,12 @@ a:focus-visible,
       <span class="quick-number">09</span>
       <span class="quick-label">KEY PROJECTS</span>
     </div>
-
   </section>
 
 
   <!-- ABOUT -->
-
   <section id="about" class="section about-section">
-
     <div class="section-heading">
-
       <div>
         <p class="eyebrow">01 / ABOUT ME</p>
         <h2>About Me<span class="accent">.</span></h2>
@@ -1580,14 +1798,11 @@ a:focus-visible,
       <p class="section-subtitle">
         사람과 사회를 이해하는 시선, 다양한 환경에서 쌓은 경험.
       </p>
-
     </div>
-
 
     <div class="about-grid">
 
       <div class="about-story">
-
         <p class="story-label">A LITTLE ABOUT ME</p>
 
         <h3>
@@ -1619,12 +1834,10 @@ a:focus-visible,
           <span>Global Perspective</span>
           <span>Continuous Improvement</span>
         </div>
-
       </div>
 
 
       <div class="timeline-card">
-
         <div class="timeline-heading">
           <span>EDUCATION & GLOBAL EXPERIENCE</span>
           <span>PROFILE</span>
@@ -1670,23 +1883,20 @@ a:focus-visible,
           </div>
 
         </div>
-
       </div>
 
     </div>
-
   </section>
 
 
   <!-- EXPERIENCE -->
-
   <section id="experience" class="section experience-section">
-
     <div class="section-heading">
       <div>
         <p class="eyebrow">02 / EXPERIENCE</p>
         <h2>Experience<span class="accent">.</span></h2>
       </div>
+
       <p class="section-subtitle">
         다양한 조직과 프로젝트에서 사람을 만나고,
         운영과 콘텐츠를 직접 기획하며 쌓은 경험입니다.
@@ -1756,92 +1966,94 @@ a:focus-visible,
 
 
   <!-- COMPETENCIES -->
-
   <section id="competencies" class="section competency-section">
-
     <div class="section-heading">
-
       <div>
-        <p class="eyebrow">03 / WHAT I BRING</p>
-
-         
         <p class="eyebrow">03 / WHAT I BRING</p>
         <h2>Core Competencies<span class="accent">.</span></h2>
       </div>
+
       <p class="section-subtitle">
         Talent Acquisition 업무에 필요한 네 가지 역량과
         이를 증명하는 주요 프로젝트를 소개합니다.
       </p>
     </div>
+
     <div class="competency-intro">
       <div>
         <strong>01</strong>
         <span>METICULOUSNESS · 꼼꼼함</span>
         <p>세부 사항까지 확인하고 정확한 운영 기준을 지킵니다.</p>
       </div>
+
       <div>
         <strong>02</strong>
         <span>EXECUTION · 실행력</span>
         <p>문제를 발견하는 데 그치지 않고 개선을 실행합니다.</p>
       </div>
+
       <div>
         <strong>03</strong>
         <span>COMMUNICATION · 커뮤니케이션</span>
         <p>상대의 입장을 살피고 명확하게 소통합니다.</p>
       </div>
+
       <div>
         <strong>04</strong>
         <span>BRANDING · 브랜딩</span>
         <p>채용 브랜딩과 기업 브랜딩으로 조직의 가치와 매력을 전달합니다.</p>
       </div>
     </div>
+
     <div class="competency-tabs">
-      <button class="filter-button active" data-filter="all">
-        ALL PROJECTS
-      </button>
-      <button class="filter-button" data-filter="meticulousness">
-        01 METICULOUSNESS
-      </button>
-      <button class="filter-button" data-filter="execution">
-        02 EXECUTION
-      </button>
-      <button class="filter-button" data-filter="communication">
-        03 COMMUNICATION
-      </button>
-      <button class="filter-button" data-filter="branding">
-        04 BRANDING
-      </button>
+      <button class="filter-button active" data-filter="all">ALL PROJECTS</button>
+      <button class="filter-button" data-filter="meticulousness">01 METICULOUSNESS</button>
+      <button class="filter-button" data-filter="execution">02 EXECUTION</button>
+      <button class="filter-button" data-filter="communication">03 COMMUNICATION</button>
+      <button class="filter-button" data-filter="branding">04 BRANDING</button>
     </div>
+
     <div class="project-grid" id="project-grid"></div>
+
     <div class="project-footer">
       <span>프로젝트 카드를 클릭하면 상세 내용을 확인할 수 있습니다.</span>
       <span id="project-count"></span>
     </div>
   </section>
+
+
+  <!-- TOOLS -->
   <section id="tools" class="section tools-section">
     <div class="section-heading">
       <div>
         <p class="eyebrow">04 / TOOLS & SKILLS</p>
         <h2>Tools I Use<span class="accent">.</span></h2>
       </div>
+
       <p class="section-subtitle">
         문서 작성부터 데이터 관리, 콘텐츠 제작과 웹 구현까지
         목적에 맞는 도구를 활용합니다.
       </p>
     </div>
+
     <div class="tools-grid" id="tools-grid"></div>
   </section>
+
+
+  <!-- TA JOURNEY -->
   <section class="journey-section section">
     <div class="section-heading">
       <div>
         <p class="eyebrow">05 / THE BIG PICTURE</p>
         <h2>The Hiring Journey<span class="accent">.</span></h2>
       </div>
+
       <p class="section-subtitle">
         채용은 합격자를 선발하는 순간에 끝나는 것이 아니라,
         조직과 사람의 관계가 시작되는 과정이라고 생각합니다.
       </p>
     </div>
+
     <div class="journey-track">
       <div class="journey-step">
         <span>01</span>
@@ -1849,21 +2061,27 @@ a:focus-visible,
         <h3>ATTRACT</h3>
         <p>조직의 매력을 알리고 적합한 인재와 만납니다.</p>
       </div>
+
       <div class="journey-line"></div>
+
       <div class="journey-step">
         <span>02</span>
         <div class="journey-icon">⌕</div>
         <h3>SELECT</h3>
         <p>일관된 기준과 체계적인 프로세스로 선발합니다.</p>
       </div>
+
       <div class="journey-line"></div>
+
       <div class="journey-step">
         <span>03</span>
         <div class="journey-icon">♡</div>
         <h3>CONNECT</h3>
         <p>모든 접점에서 존중받는 지원자 경험을 만듭니다.</p>
       </div>
+
       <div class="journey-line"></div>
+
       <div class="journey-step">
         <span>04</span>
         <div class="journey-icon">↗</div>
@@ -1872,14 +2090,20 @@ a:focus-visible,
       </div>
     </div>
   </section>
+
+
+  <!-- PHILOSOPHY -->
   <section id="perspective" class="philosophy-section section">
     <div class="philosophy-inner">
+
       <div class="philosophy-heading">
         <p class="eyebrow">06 / MY PERSPECTIVE</p>
+
         <h2>
           What makes a
           <br><span>good hiring experience?</span>
         </h2>
+
         <p>
           채용은 단순히 빈자리를 채우는 일이 아닙니다.
           지원자가 조직을 처음 만나는 순간부터 입사 후 적응하는 과정까지,
@@ -1887,43 +2111,54 @@ a:focus-visible,
           저는 지원자와 조직 모두를 고려하는 채용을 지향합니다.
         </p>
       </div>
+
       <div class="philosophy-interactive">
         <p class="question-label">WHAT MATTERS TO A CANDIDATE?</p>
+
         <h3>
           면접을 마친 지원자가 오래 기억하는 것은 무엇일까요?
         </h3>
+
         <div class="answer-options">
           <button class="answer-button" data-answer="a">
             A. 면접에서 받은 질문
           </button>
+
           <button class="answer-button" data-answer="b">
             B. 전형 과정에서 존중받았던 경험
           </button>
+
           <button class="answer-button" data-answer="c">
             C. 결과를 안내받기까지 걸린 시간
           </button>
         </div>
+
         <div id="philosophy-response" class="philosophy-response">
           답변을 선택하면 저의 생각을 확인할 수 있습니다.
         </div>
       </div>
+
     </div>
+
     <div class="values-grid">
       <div class="value-item">
         <span>01</span>
         <h3>Meticulousness</h3>
         <p>작은 안내와 빠짐없는 확인이 지원자의 경험을 바꿀 수 있다고 생각합니다.</p>
       </div>
+
       <div class="value-item">
         <span>02</span>
         <h3>Execution</h3>
         <p>문제를 발견하면 실제 변화를 만들기 위해 실행하는 태도를 중요하게 생각합니다.</p>
       </div>
+
       <div class="value-item">
         <span>03</span>
         <h3>Communication</h3>
         <p>상대방의 입장을 이해하고 필요한 정보를 명확하게 전달합니다.</p>
       </div>
+
       <div class="value-item">
         <span>04</span>
         <h3>Branding</h3>
@@ -1931,52 +2166,99 @@ a:focus-visible,
       </div>
     </div>
   </section>
+
+
+  <!-- CONTACT -->
   <section id="contact" class="contact-section section">
     <p class="eyebrow">07 / CONTACT</p>
+
     <h2>
       Let's create
       <br><span>better hiring experiences.</span>
     </h2>
+
     <p class="contact-description">
       제 경험과 가능성을 살펴봐 주셔서 감사합니다.
       <br>새로운 연결을 기다리겠습니다.
     </p>
+
     <a href="mailto:jyoungseon8@gmail.com" class="contact-email">
       jyoungseon8@gmail.com ↗
     </a>
+
     <div class="contact-socials">
-      <a href="https://www.linkedin.com/in/youngseon/"
-         target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.linkedin.com/in/youngseon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         LINKEDIN ↗
       </a>
-      <a href="https://jyoungseon.github.io/hrdesign/"
-         target="_blank" rel="noopener noreferrer">
+
+      <a
+        href="https://jyoungseon.github.io/hrdesign/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         HR DESIGN PORTFOLIO ↗
       </a>
     </div>
   </section>
+
+
+  <!-- FOOTER -->
   <footer class="footer">
     <a href="#home" class="footer-logo">YSJ.</a>
     <span>People First, Process Excellence.</span>
     <span>© 2026 YOUNGSEON JUNG</span>
   </footer>
+
 </div>
+
+
+<!-- PROJECT DETAIL MODAL -->
 <div id="project-modal" class="project-modal hidden" role="dialog" aria-modal="true">
   <div class="modal-overlay" id="modal-overlay"></div>
+
   <div class="modal-panel">
-    <button id="modal-close" class="modal-close">×</button>
+    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+
     <div id="modal-content"></div>
+
     <div class="modal-bottom">
       <span>YOUNGSEON JUNG · TA PORTFOLIO</span>
       <button id="modal-bottom-close">BACK TO PROJECTS ↑</button>
     </div>
   </div>
 </div>
+
+
 <script>
 /* ---------------------------------------
-   01. COLOR DICTIONARY
+   01. HELPERS
 --------------------------------------- */
+
+const $ = selector => document.querySelector(selector);
+
+let previousFocus = null;
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[character]);
+}
+
+
+/* ---------------------------------------
+   02. COLOR DICTIONARY
+--------------------------------------- */
+
 const DEFAULT_COLOR = "#2864B8";
+
 const colorNames = {
   red:"#D94A4A",
   blue:"#2864B8",
@@ -2008,10 +2290,174 @@ const colorNames = {
   charcoal:"#383838",
   ivory:"#F3EEDC"
 };
+
+function getColorValue(input) {
+  if (!input) return null;
+
+  const value = String(input).trim().toLowerCase();
+
+  if (colorNames[value]) return colorNames[value];
+
+  if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(value)) {
+    return value;
+  }
+
+  return null;
+}
+
+function getColorName(input) {
+  const value = String(input).trim().toLowerCase();
+
+  if (colorNames[value]) return value;
+
+  const hex = getColorValue(value);
+
+  if (!hex) return "Custom color";
+
+  const match = Object.entries(colorNames).find(
+    ([name,color]) => color.toLowerCase() === hex.toLowerCase()
+  );
+
+  return match ? match[0] : "Custom color";
+}
+
+
 /* ---------------------------------------
-   02. PROJECT DATA
+   03. COLOR ENTRY INTERACTION
 --------------------------------------- */
+
+const colorInput = $("#company-color");
+const colorPicker = $("#color-picker");
+const colorDot = $("#color-dot");
+const colorPreviewName = $("#color-preview-name");
+const colorHex = $("#color-hex");
+const colorError = $("#color-error");
+
+function previewColor(input) {
+  const color = getColorValue(input);
+
+  if (!color) {
+    colorError.textContent = "색상 이름 또는 HEX 코드를 확인해주세요.";
+    return false;
+  }
+
+  colorError.textContent = "";
+
+  colorDot.style.background = color;
+  colorPreviewName.textContent = getColorName(input);
+  colorHex.textContent = color.toUpperCase();
+  colorPicker.value = color;
+
+  return true;
+}
+
+function applyColor(color) {
+  document.documentElement.style.setProperty("--brand-color",color);
+
+  const light = mixColor(color,"#FFFFFF",.9);
+  const soft = mixColor(color,"#FFFFFF",.72);
+
+  document.documentElement.style.setProperty("--brand-light",light);
+  document.documentElement.style.setProperty("--brand-soft",soft);
+
+  colorDot.style.background = color;
+  colorHex.textContent = color.toUpperCase();
+}
+
+function mixColor(color1,color2,weight) {
+  const normalize = color => {
+    let value = color.replace("#","");
+
+    if (value.length === 3) {
+      value = value.split("").map(character => character + character).join("");
+    }
+
+    return [
+      parseInt(value.substring(0,2),16),
+      parseInt(value.substring(2,4),16),
+      parseInt(value.substring(4,6),16)
+    ];
+  };
+
+  const first = normalize(color1);
+  const second = normalize(color2);
+
+  const mixed = first.map((value,index) =>
+    Math.round(value * weight + second[index] * (1-weight))
+  );
+
+  return "#" + mixed.map(value =>
+    value.toString(16).padStart(2,"0")
+  ).join("").toUpperCase();
+}
+
+function showPortfolio(color,updateURL=true) {
+  applyColor(color);
+
+  $("#entry-screen").classList.add("hidden");
+  $("#portfolio").classList.remove("hidden");
+
+  if (updateURL) {
+    const hex = color.replace("#","");
+
+    history.replaceState(
+      null,
+      "",
+      `${location.pathname}?color=${hex}`
+    );
+  }
+
+  window.scrollTo(0,0);
+
+  initReveal();
+}
+
+colorInput.addEventListener("input",() => {
+  previewColor(colorInput.value);
+});
+
+colorPicker.addEventListener("input",() => {
+  colorInput.value = colorPicker.value;
+  previewColor(colorPicker.value);
+});
+
+$("#enter-button").addEventListener("click",() => {
+  const color = getColorValue(colorInput.value);
+
+  if (!color) {
+    colorError.textContent = "올바른 색상 이름 또는 HEX 코드를 입력해주세요.";
+    colorInput.focus();
+    return;
+  }
+
+  showPortfolio(color);
+});
+
+$("#default-button").addEventListener("click",() => {
+  colorInput.value = "blue";
+  previewColor("blue");
+  showPortfolio(DEFAULT_COLOR);
+});
+
+$("#change-theme").addEventListener("click",() => {
+  $("#portfolio").classList.add("hidden");
+  $("#entry-screen").classList.remove("hidden");
+
+  colorInput.value = getComputedStyle(document.documentElement)
+    .getPropertyValue("--brand-color").trim() || DEFAULT_COLOR;
+
+  previewColor(colorInput.value);
+
+  window.scrollTo(0,0);
+});
+
+
+/* ---------------------------------------
+   04. PROJECT DATA
+--------------------------------------- */
+
 const projects = [
+
 {
   id:"eils-recruitment",
   number:"01",
@@ -2043,6 +2489,7 @@ const projects = [
   tags:["Recruitment","Screening","Scheduling","Process Improvement"],
   highlight:"60 min → 20 min"
 },
+
 {
   id:"student-council-interview",
   number:"02",
@@ -2074,11 +2521,12 @@ const projects = [
   tags:["Interviewing","Talent Selection","Evaluation"],
   highlight:"Structured Interviews"
 },
+
 {
   id:"eils-candidate",
   number:"03",
   category:"branding",
-  categoryName:"BRANDING",
+  categoryName:"RECRUITMENT BRANDING",
   organization:"Ewha International Law Society",
   role:"HR Director",
   period:"2025",
@@ -2105,6 +2553,7 @@ const projects = [
   tags:["Candidate Experience","Interview Branding","Candidate Communication"],
   highlight:"Every Touchpoint Matters"
 },
+
 {
   id:"admissions-db",
   number:"04",
@@ -2125,18 +2574,13 @@ const projects = [
   background:"수험생들이 입학 전형과 대학생활에 관해 유사한 질문을 반복적으로 남겼습니다. 정확하고 일관된 답변을 제공할 수 있는 자료가 필요했습니다.",
   problem:"반복 문의에 매번 새롭게 답변하면 대응 효율이 낮아지고 안내 내용의 일관성을 유지하기 어려울 수 있었습니다.",
   actions:[
-
-   
     "Google Forms로 수험생 질문을 수집했습니다.",
     "질문별 관련 입학 정보를 확인한 뒤 정확한 답변을 작성했습니다.",
     "Google Docs에 질문과 답변을 축적해 Q&A 데이터베이스를 구축했습니다.",
     "기존 답변을 활용해 유사 문의에 효율적으로 대응하고 내용을 지속적으로 보완했습니다."
   ],
-
   result:"반복 문의에 활용할 수 있는 답변 DB를 구축해 온라인 멘토링의 정보 일관성과 대응 효율을 높였습니다.",
-
   contribution:"질문 수집, 정보 확인, 답변 작성 및 데이터베이스 정리를 담당했습니다.",
-
   tools:["Google Forms","Google Docs"],
   tags:["FAQ","Information Management","Communication"],
   highlight:"Reusable Q&A Database"
@@ -2154,27 +2598,20 @@ const projects = [
   subtitle:"Providing clear guidance in high-volume environments.",
   description:"대학입시박람회와 논술·면접 전형 현장에서 방문객 안내 및 운영을 지원했습니다.",
   icon:"◎",
-
   stats:[
     {value:"2 YEARS",label:"CONSECUTIVE EXPERIENCE"},
     {value:"COEX",label:"ADMISSIONS FAIR"},
     {value:"ON-SITE",label:"CANDIDATE SUPPORT"}
   ],
-
   background:"대규모 입학설명회와 전형 현장에서는 많은 방문객이 낯선 공간을 이동하며 필요한 정보를 빠르게 확인해야 합니다.",
-
   problem:"고사장과 이동 경로를 정확히 안내하고 다양한 문의에 대응해야 전형과 행사가 원활하게 진행될 수 있었습니다.",
-
   actions:[
     "코엑스에서 열린 수시·정시 대학입시박람회 등 대규모 행사에서 2년 연속 방문객 안내와 현장 운영을 보조했습니다.",
     "논술·면접 전형 현장에서 수험생과 보호자에게 고사장 및 이동 경로를 안내했습니다.",
     "현장 상황에 맞춰 문의에 대응하고 필요한 정보를 전달했습니다."
   ],
-
   result:"대규모 행사와 전형 현장에서 방문객이 필요한 정보를 확인하고 원활하게 이동할 수 있도록 지원했습니다.",
-
   contribution:"방문객 안내, 현장 문의 응대 및 행사·전형 운영 보조를 담당했습니다.",
-
   tools:["On-site Operations","Communication","Information Guidance"],
   tags:["Event Operations","Candidate Support","Communication"],
   highlight:"Two Years of Field Experience"
@@ -2192,17 +2629,13 @@ const projects = [
   subtitle:"Connecting audience insights with real professional experiences.",
   description:"학생들의 실제 취업 고민을 파악하고 현직자의 경험을 연결한 취업 정보 콘텐츠를 기획·제작했습니다.",
   icon:"✳",
-
   stats:[
     {value:"20+",label:"STUDENTS INTERVIEWED"},
     {value:"DIRECT",label:"PROFESSIONAL OUTREACH"},
     {value:"CONTENT",label:"PLANNING & PRODUCTION"}
   ],
-
   background:"취업을 준비하는 학생들에게는 일반적인 정보뿐 아니라 자신의 상황에 맞는 현실적인 조언과 현직자의 경험이 필요했습니다.",
-
   problem:"일방적으로 정보를 전달하기보다 학생들이 실제로 궁금해하는 내용을 파악해 콘텐츠 주제와 형식에 반영할 필요가 있었습니다.",
-
   actions:[
     "취업 관련 행사와 교과목 개설 등 정보를 조사해 카드뉴스를 기획·제작했습니다.",
     "학생 약 20명을 직접 인터뷰해 취업 준비 과정에서 궁금한 점과 현직자에게 듣고 싶은 조언을 파악했습니다.",
@@ -2210,11 +2643,8 @@ const projects = [
     "인터뷰 내용을 정리해 블로그 콘텐츠로 작성했습니다.",
     "취업 멘토링 행사 운영을 지원하고 참여 멘토를 인터뷰해 콘텐츠 제작에 활용했습니다."
   ],
-
   result:"학생 수요를 바탕으로 취업 정보와 실제 경험을 연결한 콘텐츠를 제작했습니다.",
-
   contribution:"정보 조사, 학생 인터뷰, 취업자 섭외, 인터뷰 진행, 카드뉴스 기획 및 블로그 글 작성을 담당했습니다.",
-
   tools:["Card News","Blog","Interview Planning","Content Writing"],
   tags:["Content Strategy","Audience Research","Storytelling"],
   highlight:"20+ Student Interviews"
@@ -2224,7 +2654,7 @@ const projects = [
   id:"hr-design",
   number:"07",
   category:"branding",
-  categoryName:"BRANDING",
+  categoryName:"CORPORATE BRANDING",
   organization:"Independent Portfolio Project",
   role:"Content Planner & Designer",
   period:"2026",
@@ -2232,17 +2662,13 @@ const projects = [
   subtitle:"Building a consistent visual identity through HR content.",
   description:"그래픽 디자인, 프레젠테이션, 에디토리얼, 영상 콘텐츠를 정리한 HR 디자인 포트폴리오입니다.",
   icon:"✳",
-
   stats:[
     {value:"04",label:"DESIGN CATEGORIES"},
     {value:"MULTI",label:"CONTENT FORMATS"},
     {value:"HR",label:"FOCUSED PORTFOLIO"}
   ],
-
   background:"HR 업무에서는 채용과 조직의 정보를 정확하게 전달하는 동시에 구성원과 지원자가 쉽게 이해하고 관심을 가질 수 있도록 시각적으로 구성하는 역량도 중요하다고 생각했습니다.",
-
   problem:"복잡한 정보를 효과적으로 전달하려면 대상과 목적에 맞는 콘텐츠 기획 및 시각화가 필요합니다.",
-
   actions:[
     "카드뉴스와 포스터 등 그래픽 디자인 작업을 기획·제작했습니다.",
     "정보를 구조화한 프레젠테이션 자료를 제작했습니다.",
@@ -2250,11 +2676,8 @@ const projects = [
     "숏폼과 롱폼 영상 콘텐츠를 기획·제작했습니다.",
     "작업물을 HR Design 포트폴리오 웹사이트에 정리했습니다."
   ],
-
   result:"HR 관련 정보 전달과 콘텐츠 제작 역량을 별도 포트폴리오로 구성했습니다.",
-
   contribution:"콘텐츠 기획, 정보 구조화, 시각 디자인 및 미디어 제작을 수행했습니다.",
-
   tools:["Adobe Photoshop","Canva","MiriCanvas","Mangoboard","Adobe Premiere Pro","PowerPoint"],
   tags:["Visual Communication","Content Production","Graphic Design"],
   highlight:"Explore HR Design Portfolio",
@@ -2273,28 +2696,21 @@ const projects = [
   subtitle:"Turning recurring mistakes into a systematic learning resource.",
   description:"학회원 보고서에서 반복되는 각주 오류를 분석하고 작성 가이드를 제작해 신입회원 오리엔테이션에서 공유했습니다.",
   icon:"▤",
-
   stats:[
     {value:"8 → 3",label:"AVERAGE PENALTY"},
     {value:"62.5%",label:"REDUCTION"},
     {value:"2",label:"GUIDE FORMATS"}
   ],
-
   background:"학회원들의 보고서에서 각주 작성 오류가 반복적으로 발생했습니다. 개별 오류를 수정하는 것만으로는 같은 문제가 재발하는 것을 막기 어려웠습니다.",
-
   problem:"명확한 작성 기준과 신규 회원이 참고할 수 있는 공통 안내 자료가 부재했습니다.",
-
   actions:[
     "보고서에서 반복되는 각주 오류를 확인하고 원인을 파악했습니다.",
     "각주 작성 기준을 체계화했습니다.",
     "Word와 PowerPoint로 안내 자료를 제작했습니다.",
     "신입회원 오리엔테이션에서 가이드를 공유해 구성원이 기준을 숙지하도록 지원했습니다."
   ],
-
   result:"학기당 각주 관련 벌점 평균을 8점에서 3점으로 약 62.5% 감소시켰습니다.",
-
   contribution:"오류 유형 확인, 작성 기준 정리, 안내 자료 제작 및 오리엔테이션 공유를 담당했습니다.",
-
   tools:["Microsoft Word","PowerPoint"],
   tags:["Onboarding","Guideline Design","Process Improvement"],
   highlight:"8 → 3 Average Penalty Points"
@@ -2312,28 +2728,21 @@ const projects = [
   subtitle:"Maintaining accurate records and transparent communication.",
   description:"회원 20명의 주간 출결과 벌점 현황을 Excel로 관리하고 분기별 개인 현황을 안내했습니다.",
   icon:"▥",
-
   stats:[
     {value:"20",label:"MEMBERS"},
     {value:"WEEKLY",label:"RECORD UPDATES"},
     {value:"QUARTERLY",label:"INDIVIDUAL REPORTS"}
   ],
-
   background:"구성원의 활동 내역과 관련 규정을 일관되게 관리하고 개인별 현황을 투명하게 공유할 필요가 있었습니다.",
-
   problem:"출결과 벌점 기록이 지속적으로 갱신되지 않거나 관리 기준이 명확하게 전달되지 않으면 구성원이 자신의 활동 현황을 파악하기 어려울 수 있었습니다.",
-
   actions:[
     "회원 20명의 주간 출결 및 벌점 현황을 Excel로 기록·관리했습니다.",
     "활동 기록을 지속적으로 갱신했습니다.",
     "분기별로 개인별 현황을 안내했습니다.",
     "관련 규정과 관리 기준을 명확하게 전달했습니다."
   ],
-
   result:"구성원별 활동 내역을 체계적으로 관리하고 관리 기준을 명확하게 공유했습니다.",
-
   contribution:"출결·벌점 데이터 기록, 정기 업데이트 및 개인별 현황 안내를 담당했습니다.",
-
   tools:["Excel"],
   tags:["HR Administration","Data Management","Record Keeping"],
   highlight:"20 Members Managed"
@@ -2343,7 +2752,7 @@ const projects = [
 
 
 /* ---------------------------------------
-   03. TOOL DATA
+   05. TOOL DATA
 --------------------------------------- */
 
 const toolGroups = [
@@ -2404,431 +2813,17 @@ const toolGroups = [
 
 ];
 
-   
-        </div>
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-  $("#project-count").textContent =
-    `${filtered.length} PROJECT${filtered.length === 1 ? "" : "S"}`;
-
-}
-
-document.querySelectorAll(".filter-button").forEach(button => {
-
-  button.addEventListener("click",() => {
-
-    document.querySelectorAll(".filter-button").forEach(item => {
-      item.classList.remove("active");
-    });
-
-    button.classList.add("active");
-
-    renderProjects(button.dataset.filter);
-
-  });
-
-});
-
-function renderTools() {
-
-  $("#tools-grid").innerHTML = toolGroups.map(group => `
-
-    <article class="tool-card">
-
-      <div class="tool-card-heading">
-
-        <div class="tool-icon">
-          ${escapeHTML(group.icon)}
-        </div>
-
-        <div>
-          <h3>${escapeHTML(group.name)}</h3>
-          <p>${escapeHTML(group.english)}</p>
-        </div>
-
-      </div>
-
-      <div class="tool-tags">
-
-        ${group.tools.map(tool => `
-          <span>${escapeHTML(tool)}</span>
-        `).join("")}
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-}
-
 
 /* ---------------------------------------
-   07. PROJECT DETAIL MODAL
+   06. PROJECT RENDERING
 --------------------------------------- */
 
-const projectModal = $("#project-modal");
-
-const modalContent = $("#modal-content");
-
-function openProject(projectId) {
-
-  const project = projects.find(item => item.id === projectId);
-
-  if (!project) return;
-
-  previousFocus = document.activeElement;
-
-  const statsHTML = project.stats.map(stat => `
-
-    <div class="modal-stat">
-      <strong>${escapeHTML(stat.value)}</strong>
-      <span>${escapeHTML(stat.label)}</span>
-    </div>
-
-  `).join("");
-
-  const actionsHTML = project.actions.map(action => `
-
-    <li>${escapeHTML(action)}</li>
-
-  `).join("");
-
-  const toolsHTML = project.tools.map(tool => `
-
-    <span>${escapeHTML(tool)}</span>
-
-  `).join("");
-
-  modalContent.innerHTML = `
-
-    <div class="modal-hero">
-
-      <span class="modal-category">
-        ${escapeHTML(categoryLabels[project.category])}
-      </span>
-
-      <h2>${escapeHTML(project.title)}</h2>
-
-      <p>${escapeHTML(project.subtitle)}</p>
-
-      <div class="modal-meta">
-
-        <span>
-          Organization
-          <strong>${escapeHTML(project.organization)}</strong>
-        </span>
-
-        <span>
-          Role
-          <strong>${escapeHTML(project.role)}</strong>
-        </span>
-
-        <span>
-          Period
-          <strong>${escapeHTML(project.period)}</strong>
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="modal-body">
-
-      <p class="modal-summary">
-        ${escapeHTML(project.description)}
-      </p>
-
-      <div class="modal-stats">
-        ${statsHTML}
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>01</span> BACKGROUND</h3>
-
-        <p>${escapeHTML(project.background)}</p>
-
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>02</span> CHALLENGE</h3>
-
-        <p>${escapeHTML(project.problem)}</p>
-
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>03</span> ACTIONS</h3>
-
-        <ul>${actionsHTML}</ul>
-
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>04</span> RESULT</h3>
-
-        <p>${escapeHTML(project.result)}</p>
-
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>05</span> MY CONTRIBUTION</h3>
-
-        <p>${escapeHTML(project.contribution)}</p>
-
-      </div>
-
-      <div class="detail-block">
-
-        <h3><span>06</span> TOOLS</h3>
-
-        <div class="detail-tools">
-          ${toolsHTML}
-        </div>
-
-      </div>
-
-      ${project.externalLink ? `
-
-        <div class="detail-block">
-
-          <h3><span>↗</span> PORTFOLIO LINK</h3>
-
-          <a
-            class="project-external-link"
-            href="${escapeHTML(project.externalLink)}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Explore HR Design Portfolio ↗
-          </a>
-
-        </div>
-
-      ` : ""}
-
-    </div>
-
-  `;
-
-  projectModal.classList.remove("hidden");
-
-  document.body.style.overflow = "hidden";
-
-  $("#modal-close").focus();
-
-}
-
-function closeProject() {
-
-  projectModal.classList.add("hidden");
-
-  document.body.style.overflow = "";
-
-  if (previousFocus && typeof previousFocus.focus === "function") {
-    previousFocus.focus();
-  }
-
-}
-
-$("#project-grid").addEventListener("click",event => {
-
-  const card = event.target.closest(".project-card");
-
-  if (!card) return;
-
-  openProject(card.dataset.projectId);
-
-});
-
-$("#project-grid").addEventListener("keydown",event => {
-
-  if (event.key !== "Enter" && event.key !== " ") return;
-
-  const card = event.target.closest(".project-card");
-
-  if (!card) return;
-
-  event.preventDefault();
-
-  openProject(card.dataset.projectId);
-
-});
-
-$("#modal-close").addEventListener("click",closeProject);
-
-$("#modal-bottom-close").addEventListener("click",closeProject);
-
-$("#modal-overlay").addEventListener("click",closeProject);
-
-document.addEventListener("keydown",event => {
-
-  if (event.key === "Escape" && !projectModal.classList.contains("hidden")) {
-    closeProject();
-  }
-
-});
-
-
-/* ---------------------------------------
-   08. PHILOSOPHY INTERACTION
---------------------------------------- */
-
-const philosophyResponses = {
-
-  a:
-    "면접 질문도 중요하지만, 지원자가 조직을 경험하는 방식은 질문만으로 결정되지 않습니다. 전형 전후의 안내와 소통까지 모두 채용 경험의 일부입니다.",
-
-  b:
-    "저는 지원자가 존중받았다고 느끼는 경험이 좋은 채용의 핵심이라고 생각합니다. 결과와 관계없이 모든 지원자가 조직에 대해 긍정적인 인상을 가질 수 있도록 세심한 운영이 필요합니다.",
-
-  c:
-    "결과 안내까지 걸리는 시간 역시 지원자 경험에 영향을 미칩니다. 정해진 일정에 맞춰 정확하고 신속하게 소통하는 것이 중요합니다."
-
+const categoryLabels = {
+  meticulousness:"METICULOUSNESS",
+  execution:"EXECUTION",
+  communication:"COMMUNICATION",
+  branding:"BRANDING"
 };
-
-document.querySelectorAll(".answer-button").forEach(button => {
-
-  button.addEventListener("click",() => {
-
-    document.querySelectorAll(".answer-button").forEach(item => {
-      item.classList.remove("selected");
-    });
-
-    button.classList.add("selected");
-
-    $("#philosophy-response").textContent =
-      philosophyResponses[button.dataset.answer];
-
-  });
-
-});
-
-
-/* ---------------------------------------
-   09. MOBILE NAVIGATION
---------------------------------------- */
-
-const mobileMenuButton = $("#mobile-menu-button");
-
-const navLinks = $(".nav-links");
-
-mobileMenuButton.addEventListener("click",() => {
-
-  navLinks.classList.toggle("open");
-
-  mobileMenuButton.textContent =
-    navLinks.classList.contains("open") ? "×" : "☰";
-
-});
-
-navLinks.querySelectorAll("a").forEach(link => {
-
-  link.addEventListener("click",() => {
-
-    navLinks.classList.remove("open");
-
-    mobileMenuButton.textContent = "☰";
-
-  });
-
-});
-
-
-/* ---------------------------------------
-   10. SCROLL REVEAL
---------------------------------------- */
-
-function initReveal() {
-
-  const revealTargets = document.querySelectorAll(
-    ".section-heading, .about-story, .timeline-card, " +
-    ".experience-item, .competency-intro>div, .project-card, " +
-    ".tool-card, .journey-step, .philosophy-heading, .value-item"
-  );
-
-  if (!("IntersectionObserver" in window)) {
-
-    revealTargets.forEach(target => {
-      target.classList.add("visible");
-    });
-
-    return;
-  }
-
-  const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("visible");
-
-        observer.unobserve(entry.target);
-
-      }
-
-    });
-
-  },{
-    threshold:.12
-  });
-
-  revealTargets.forEach(target => {
-
-    target.classList.add("reveal");
-
-    observer.observe(target);
-
-  });
-
-}
-
-
-/* ---------------------------------------
-   11. INITIALIZATION
---------------------------------------- */
-
-renderProjects();
-
-renderTools();
-
-const params = new URLSearchParams(location.search);
-
-const sharedColor = params.get("color");
-
-if (sharedColor) {
-
-  const color = getColorValue("#" + sharedColor);
-
-  if (color) {
-
-    colorInput.value = "#" + sharedColor;
-
-    showPortfolio(color,false);
-
-  }
-
-}
-
-</script>
-</body>
-</html>
-
-
-/* ---------------------------------------
-   07. PROJECT RENDERING
---------------------------------------- */
 
 function renderProjects(filter="all") {
 
@@ -2876,7 +2871,9 @@ function renderProjects(filter="all") {
 
         <div class="project-card-bottom">
 
-          <span>${escapeHTML(project.role)} · ${escapeHTML(project.period)}</span>
+          <span>
+            ${escapeHTML(project.role)} · ${escapeHTML(project.period)}
+          </span>
 
           <strong>↗</strong>
 
@@ -2891,6 +2888,62 @@ function renderProjects(filter="all") {
   $("#project-count").textContent =
     `${filtered.length} PROJECT${filtered.length === 1 ? "" : "S"}`;
 
+  initReveal();
+
+}
+
+document.querySelectorAll(".filter-button").forEach(button => {
+
+  button.addEventListener("click",() => {
+
+    document.querySelectorAll(".filter-button").forEach(item => {
+      item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    renderProjects(button.dataset.filter);
+
+  });
+
+});
+
+
+/* ---------------------------------------
+   07. TOOL RENDERING
+--------------------------------------- */
+
+function renderTools() {
+
+  $("#tools-grid").innerHTML = toolGroups.map(group => `
+
+    <article class="tool-card">
+
+      <div class="tool-card-heading">
+
+        <div class="tool-icon">
+          ${escapeHTML(group.icon)}
+        </div>
+
+        <div>
+          <h3>${escapeHTML(group.name)}</h3>
+          <p>${escapeHTML(group.english)}</p>
+        </div>
+
+      </div>
+
+      <div class="tool-tags">
+
+        ${group.tools.map(tool => `
+          <span>${escapeHTML(tool)}</span>
+        `).join("")}
+
+      </div>
+
+    </article>
+
+  `).join("");
+
 }
 
 
@@ -2898,11 +2951,8 @@ function renderProjects(filter="all") {
    08. PROJECT DETAIL MODAL
 --------------------------------------- */
 
-const modal = $("#project-modal");
-
+const projectModal = $("#project-modal");
 const modalContent = $("#modal-content");
-
-let previousFocus = null;
 
 function openProject(projectId) {
 
@@ -2912,54 +2962,32 @@ function openProject(projectId) {
 
   previousFocus = document.activeElement;
 
-  const stats = project.stats.map(stat => `
+  const statsHTML = project.stats.map(stat => `
 
     <div class="modal-stat">
-
       <strong>${escapeHTML(stat.value)}</strong>
-
       <span>${escapeHTML(stat.label)}</span>
-
     </div>
 
   `).join("");
 
-  const actions = project.actions.map(action => `
+  const actionsHTML = project.actions.map(action => `
 
     <li>${escapeHTML(action)}</li>
 
   `).join("");
 
-  const tools = project.tools.map(tool => `
+  const toolsHTML = project.tools.map(tool => `
 
     <span>${escapeHTML(tool)}</span>
 
   `).join("");
 
-  const tags = project.tags.map(tag => `
+  const tagsHTML = project.tags.map(tag => `
 
     <span>${escapeHTML(tag)}</span>
 
   `).join("");
-
-  const external = project.externalLink ? `
-
-    <div class="detail-block">
-
-      <h3>PROJECT LINK</h3>
-
-      <a
-        class="project-external-link"
-        href="${escapeHTML(project.externalLink)}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Explore Portfolio ↗
-      </a>
-
-    </div>
-
-  ` : "";
 
   modalContent.innerHTML = `
 
@@ -2994,7 +3022,6 @@ function openProject(projectId) {
 
     </div>
 
-
     <div class="modal-body">
 
       <p class="modal-summary">
@@ -3002,83 +3029,72 @@ function openProject(projectId) {
       </p>
 
       <div class="modal-stats">
-        ${stats}
+        ${statsHTML}
       </div>
 
-
       <div class="detail-block">
-
         <h3><span>01</span> BACKGROUND</h3>
-
         <p>${escapeHTML(project.background)}</p>
-
       </div>
 
-
       <div class="detail-block">
-
         <h3><span>02</span> CHALLENGE</h3>
-
         <p>${escapeHTML(project.problem)}</p>
-
       </div>
 
-
       <div class="detail-block">
-
-        <h3><span>03</span> ACTION</h3>
-
-        <ul>${actions}</ul>
-
+        <h3><span>03</span> ACTIONS</h3>
+        <ul>${actionsHTML}</ul>
       </div>
 
-
       <div class="detail-block">
-
         <h3><span>04</span> RESULT</h3>
-
         <p>${escapeHTML(project.result)}</p>
-
       </div>
 
-
       <div class="detail-block">
-
         <h3><span>05</span> MY CONTRIBUTION</h3>
-
         <p>${escapeHTML(project.contribution)}</p>
-
       </div>
 
-
       <div class="detail-block">
-
-        <h3>TOOLS & SKILLS</h3>
-
+        <h3><span>06</span> TOOLS</h3>
         <div class="detail-tools">
-          ${tools}
+          ${toolsHTML}
         </div>
-
       </div>
 
-
       <div class="detail-block">
-
         <h3>PROJECT KEYWORDS</h3>
-
         <div class="detail-tools">
-          ${tags}
+          ${tagsHTML}
         </div>
-
       </div>
 
-      ${external}
+      ${project.externalLink ? `
+
+        <div class="detail-block">
+
+          <h3><span>↗</span> PORTFOLIO LINK</h3>
+
+          <a
+            class="project-external-link"
+            href="${escapeHTML(project.externalLink)}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore HR Design Portfolio ↗
+          </a>
+
+        </div>
+
+      ` : ""}
 
     </div>
 
   `;
 
-  modal.classList.remove("hidden");
+  projectModal.classList.remove("hidden");
 
   document.body.classList.add("modal-open");
 
@@ -3088,11 +3104,11 @@ function openProject(projectId) {
 
 function closeProject() {
 
-  modal.classList.add("hidden");
+  projectModal.classList.add("hidden");
 
   document.body.classList.remove("modal-open");
 
-  if (previousFocus && previousFocus.focus) {
+  if (previousFocus && typeof previousFocus.focus === "function") {
     previousFocus.focus();
   }
 
@@ -3124,13 +3140,13 @@ $("#project-grid").addEventListener("keydown",event => {
 
 $("#modal-close").addEventListener("click",closeProject);
 
-$("#modal-overlay").addEventListener("click",closeProject);
-
 $("#modal-bottom-close").addEventListener("click",closeProject);
+
+$("#modal-overlay").addEventListener("click",closeProject);
 
 document.addEventListener("keydown",event => {
 
-  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+  if (event.key === "Escape" && !projectModal.classList.contains("hidden")) {
     closeProject();
   }
 
@@ -3138,57 +3154,19 @@ document.addEventListener("keydown",event => {
 
 
 /* ---------------------------------------
-   09. TOOL RENDERING
---------------------------------------- */
-
-function renderTools() {
-
-  $("#tools-grid").innerHTML = toolGroups.map(group => `
-
-    <article class="tool-card">
-
-      <div class="tool-card-heading">
-
-        <span class="tool-icon">
-          ${escapeHTML(group.icon)}
-        </span>
-
-        <div>
-          <h3>${escapeHTML(group.name)}</h3>
-          <p>${escapeHTML(group.english)}</p>
-        </div>
-
-      </div>
-
-      <div class="tool-tags">
-
-        ${group.tools.map(tool => `
-          <span>${escapeHTML(tool)}</span>
-        `).join("")}
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-}
-
-
-/* ---------------------------------------
-   10. PHILOSOPHY INTERACTION
+   09. PHILOSOPHY INTERACTION
 --------------------------------------- */
 
 const philosophyResponses = {
 
   a:
-  "면접 질문은 지원자의 역량을 확인하는 중요한 수단입니다. 다만 면접의 경험은 질문만으로 완성되지 않습니다.",
+    "면접 질문도 중요하지만, 지원자가 조직을 경험하는 방식은 질문만으로 결정되지 않습니다. 전형 전후의 안내와 소통까지 모두 채용 경험의 일부입니다.",
 
   b:
-  "제가 중요하게 생각하는 부분입니다. 지원자는 전형 과정의 모든 접점에서 조직을 경험합니다. 결과와 관계없이 존중받았다는 인상을 남기는 채용을 만들고 싶습니다.",
+    "저는 지원자가 존중받았다고 느끼는 경험이 좋은 채용의 핵심이라고 생각합니다. 결과와 관계없이 모든 지원자가 조직에 대해 긍정적인 인상을 가질 수 있도록 세심한 운영이 필요합니다.",
 
   c:
-  "결과 안내의 속도와 정확성은 지원자의 불확실성을 줄이는 기본적인 약속입니다. 전형 단계마다 명확하게 소통하는 것이 중요합니다."
+    "결과 안내까지 걸리는 시간 역시 지원자 경험에 영향을 미칩니다. 정해진 일정에 맞춰 정확하고 신속하게 소통하는 것이 중요합니다."
 
 };
 
@@ -3211,32 +3189,31 @@ document.querySelectorAll(".answer-button").forEach(button => {
 
 
 /* ---------------------------------------
-   11. MOBILE MENU
+   10. MOBILE NAVIGATION
 --------------------------------------- */
 
-const menuButton = $("#mobile-menu-button");
-
+const mobileMenuButton = $("#mobile-menu-button");
 const navLinks = $(".nav-links");
 
-menuButton.addEventListener("click",() => {
+mobileMenuButton.addEventListener("click",() => {
 
   const isOpen = navLinks.classList.toggle("open");
 
-  menuButton.setAttribute("aria-expanded",String(isOpen));
+  mobileMenuButton.setAttribute("aria-expanded",String(isOpen));
 
-  menuButton.textContent = isOpen ? "×" : "☰";
+  mobileMenuButton.textContent = isOpen ? "×" : "☰";
 
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+navLinks.querySelectorAll("a").forEach(link => {
 
   link.addEventListener("click",() => {
 
     navLinks.classList.remove("open");
 
-    menuButton.setAttribute("aria-expanded","false");
+    mobileMenuButton.setAttribute("aria-expanded","false");
 
-    menuButton.textContent = "☰";
+    mobileMenuButton.textContent = "☰";
 
   });
 
@@ -3244,20 +3221,21 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
 /* ---------------------------------------
-   12. SCROLL REVEAL
+   11. SCROLL REVEAL
 --------------------------------------- */
 
 function initReveal() {
 
-  const elements = document.querySelectorAll(
+  const revealTargets = document.querySelectorAll(
     ".section-heading, .about-story, .timeline-card, " +
-    ".project-card, .journey-step, .value-item, .tool-card"
+    ".experience-item, .competency-intro>div, .project-card, " +
+    ".tool-card, .journey-step, .philosophy-heading, .value-item"
   );
 
   if (!("IntersectionObserver" in window)) {
 
-    elements.forEach(element => {
-      element.classList.add("visible");
+    revealTargets.forEach(target => {
+      target.classList.add("visible");
     });
 
     return;
@@ -3278,15 +3256,17 @@ function initReveal() {
 
     });
 
-  },{threshold:.12});
+  },{
+    threshold:.12
+  });
 
-  elements.forEach(element => {
+  revealTargets.forEach(target => {
 
-    if (!element.classList.contains("visible")) {
+    if (!target.classList.contains("visible")) {
 
-      element.classList.add("reveal");
+      target.classList.add("reveal");
 
-      observer.observe(element);
+      observer.observe(target);
 
     }
 
@@ -3296,7 +3276,7 @@ function initReveal() {
 
 
 /* ---------------------------------------
-   13. INITIALIZATION
+   12. INITIALIZATION
 --------------------------------------- */
 
 function initialize() {
@@ -3307,15 +3287,15 @@ function initialize() {
 
   const params = new URLSearchParams(location.search);
 
-  const urlColor = params.get("color");
+  const sharedColor = params.get("color");
 
-  if (urlColor) {
+  if (sharedColor) {
 
-    const color = getColorValue(urlColor);
+    const color = getColorValue("#" + sharedColor);
 
     if (color) {
 
-      colorInput.value = urlColor;
+      colorInput.value = "#" + sharedColor;
 
       showPortfolio(color,false);
 
@@ -3334,6 +3314,5 @@ function initialize() {
 initialize();
 
 </script>
-
 </body>
 </html>
