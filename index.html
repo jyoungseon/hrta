@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2864B8">
 <title>Youngseon Jung | Talent Acquisition Portfolio</title>
-
 <style>
 /* =========================================
    01. DESIGN SYSTEM
@@ -24,14 +23,11 @@
   --font: Arial, "Noto Sans KR", sans-serif;
   --content-width: 1120px;
 }
-
 * { margin:0; padding:0; box-sizing:border-box; }
-
 html {
   scroll-behavior:smooth;
   scroll-padding-top:85px;
 }
-
 body {
   font-family:var(--font);
   color:var(--ink);
@@ -39,27 +35,21 @@ body {
   line-height:1.7;
   overflow-x:hidden;
 }
-
 body.modal-open { overflow:hidden; }
-
 a { color:inherit; text-decoration:none; }
 button, input { font:inherit; }
 button { cursor:pointer; }
 .hidden { display:none !important; }
-
 .eyebrow {
   font-size:10px;
   font-weight:800;
   letter-spacing:2px;
   color:var(--brand-color);
 }
-
 .accent { color:var(--brand-color); }
-
 .section {
   padding:110px max(7%,calc((100% - var(--content-width))/2));
 }
-
 .section-heading {
   display:flex;
   justify-content:space-between;
@@ -67,21 +57,18 @@ button { cursor:pointer; }
   gap:30px;
   margin-bottom:45px;
 }
-
 .section-heading h2 {
   font-size:clamp(34px,5vw,52px);
   letter-spacing:-2px;
   line-height:1.2;
   margin-top:12px;
 }
-
 .section-subtitle {
   max-width:350px;
   font-size:12px;
   color:var(--muted);
   line-height:1.9;
 }
-
 .primary-button {
   display:inline-flex;
   justify-content:center;
@@ -96,16 +83,13 @@ button { cursor:pointer; }
   font-weight:800;
   transition:.25s;
 }
-
 .primary-button:hover {
   transform:translateY(-3px);
   opacity:.88;
 }
-
 /* =========================================
    02. COLOR ENTRY
 ========================================= */
-
 .entry-screen {
   min-height:100vh;
   padding:35px 7%;
@@ -114,7 +98,6 @@ button { cursor:pointer; }
   justify-content:center;
   background:var(--paper);
 }
-
 .entry-inner {
   width:100%;
   max-width:850px;
@@ -123,21 +106,17 @@ button { cursor:pointer; }
   flex-direction:column;
   justify-content:space-between;
 }
-
 .entry-header,
 .entry-footer {
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-
 .wordmark {
   font-size:24px;
   font-weight:900;
 }
-
 .wordmark span { color:var(--brand-color); }
-
 .entry-header>span,
 .entry-footer {
   font-size:9px;
@@ -145,37 +124,30 @@ button { cursor:pointer; }
   letter-spacing:1.3px;
   color:var(--muted);
 }
-
 .entry-content {
   max-width:660px;
   margin:75px 0;
 }
-
 .entry-content h1 {
   font-size:clamp(43px,7vw,75px);
   letter-spacing:-3px;
   line-height:1.1;
   margin:24px 0;
 }
-
 .entry-content h1 span { color:var(--brand-color); }
-
 .entry-description {
   color:var(--muted);
   font-size:14px;
   line-height:1.9;
 }
-
 .entry-form {
   max-width:500px;
   margin-top:45px;
 }
-
 .entry-form>label {
   font-size:11px;
   font-weight:800;
 }
-
 .color-input-row {
   display:flex;
   align-items:center;
@@ -186,11 +158,9 @@ button { cursor:pointer; }
   padding:10px 12px 10px 17px;
   gap:12px;
 }
-
 .color-input-row:focus-within {
   border-color:var(--brand-color);
 }
-
 .color-input-row input[type=text] {
   flex:1;
   min-width:0;
@@ -198,7 +168,6 @@ button { cursor:pointer; }
   outline:0;
   font-size:13px;
 }
-
 .color-picker-label {
   width:38px;
   height:38px;
@@ -212,7 +181,6 @@ button { cursor:pointer; }
   position:relative;
   overflow:hidden;
 }
-
 .color-picker-label input {
   position:absolute;
   inset:-10px;
@@ -221,7 +189,6 @@ button { cursor:pointer; }
   opacity:0;
   cursor:pointer;
 }
-
 .color-preview-row {
   display:flex;
   align-items:center;
@@ -230,27 +197,22 @@ button { cursor:pointer; }
   font-size:11px;
   color:var(--muted);
 }
-
 #color-dot {
   width:12px;
   height:12px;
   border-radius:50%;
   background:var(--brand-color);
 }
-
 #color-hex {
   margin-left:auto;
 }
-
 .error-message {
   color:#C13E4C;
   font-size:11px;
   min-height:20px;
   margin-top:7px;
 }
-
 .entry-form .primary-button { width:100%; }
-
 .text-button {
   display:block;
   margin:16px auto 0;
@@ -260,11 +222,9 @@ button { cursor:pointer; }
   font-size:11px;
   text-decoration:underline;
 }
-
 /* =========================================
    03. NAVIGATION
 ========================================= */
-
 .navbar {
   height:74px;
   padding:0 7%;
@@ -278,28 +238,22 @@ button { cursor:pointer; }
   backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
 }
-
 .logo {
   font-size:25px;
   font-weight:900;
 }
-
 .logo span { color:var(--brand-color); }
-
 .nav-links {
   display:flex;
   gap:24px;
   align-items:center;
 }
-
 .nav-links a {
   font-size:9px;
   font-weight:800;
   letter-spacing:.6px;
 }
-
 .nav-links a:hover { color:var(--brand-color); }
-
 .theme-button {
   border:1px solid var(--line);
   background:white;
@@ -311,25 +265,21 @@ button { cursor:pointer; }
   gap:8px;
   align-items:center;
 }
-
 .theme-dot {
   width:10px;
   height:10px;
   background:var(--brand-color);
   border-radius:50%;
 }
-
 .mobile-menu-button {
   display:none;
   background:none;
   border:0;
   font-size:22px;
 }
-
 /* =========================================
    04. HERO
 ========================================= */
-
 .hero {
   min-height:620px;
   padding:80px 7% 50px;
@@ -337,7 +287,6 @@ button { cursor:pointer; }
   position:relative;
   overflow:hidden;
 }
-
 .hero-inner {
   max-width:var(--content-width);
   margin:auto;
@@ -347,22 +296,18 @@ button { cursor:pointer; }
   gap:25px;
   min-height:450px;
 }
-
 .hero-copy h1 {
   font-size:clamp(39px,5.3vw,68px);
   line-height:1.25;
   letter-spacing:-3px;
   margin:25px 0;
 }
-
 .hero-copy h1 span { color:var(--brand-color); }
-
 .hero-description {
   color:var(--muted);
   font-size:13px;
   line-height:2;
 }
-
 .hero-actions {
   display:flex;
   align-items:center;
@@ -370,21 +315,18 @@ button { cursor:pointer; }
   margin-top:32px;
   flex-wrap:wrap;
 }
-
 .secondary-link {
   font-size:10px;
   font-weight:800;
   border-bottom:1px solid var(--brand-color);
   padding-bottom:5px;
 }
-
 .hero-visual {
   min-height:380px;
   position:relative;
   display:grid;
   place-items:center;
 }
-
 .hero-circle {
   width:225px;
   height:225px;
@@ -400,18 +342,15 @@ button { cursor:pointer; }
   box-shadow:0 25px 70px rgba(40,100,184,.2);
   animation:float 5s ease-in-out infinite;
 }
-
 .hero-circle strong {
   font-size:95px;
   line-height:1;
   letter-spacing:-7px;
 }
-
 .circle-small {
   font-size:8px;
   letter-spacing:2px;
 }
-
 .hero-orbit {
   position:absolute;
   border:1px solid var(--brand-soft);
@@ -419,14 +358,12 @@ button { cursor:pointer; }
   width:315px;
   height:315px;
 }
-
 .orbit-two {
   width:385px;
   height:385px;
   border-style:dashed;
   animation:rotate 35s linear infinite;
 }
-
 .floating-note {
   position:absolute;
   z-index:3;
@@ -438,17 +375,14 @@ button { cursor:pointer; }
   font-weight:700;
   animation:float 5s ease-in-out infinite;
 }
-
 .floating-note span {
   color:var(--brand-color);
   margin-right:7px;
 }
-
 .note-one { top:25px; left:0; }
 .note-two { top:100px; right:-5px; animation-delay:.5s; }
 .note-three { bottom:80px; left:-10px; animation-delay:1s; }
 .note-four { bottom:25px; right:15px; animation-delay:1.5s; }
-
 .hero-bottom {
   max-width:var(--content-width);
   margin:35px auto 0;
@@ -461,11 +395,9 @@ button { cursor:pointer; }
   letter-spacing:1px;
   color:var(--muted);
 }
-
 /* =========================================
    05. QUICK PROFILE
 ========================================= */
-
 .quick-profile {
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -473,7 +405,6 @@ button { cursor:pointer; }
   border-bottom:1px solid var(--line);
   background:white;
 }
-
 .quick-profile>div {
   padding:8px 15px;
   display:flex;
@@ -481,62 +412,51 @@ button { cursor:pointer; }
   align-items:center;
   border-right:1px solid var(--line);
 }
-
 .quick-profile>div:last-child { border:0; }
-
 .quick-number {
   color:var(--brand-color);
   font-size:26px;
   font-weight:800;
 }
-
 .quick-label {
   color:var(--muted);
   font-size:9px;
   font-weight:700;
 }
-
 /* =========================================
    06. ABOUT
 ========================================= */
-
 .about-section { background:var(--paper); }
-
 .about-grid {
   display:grid;
   grid-template-columns:.9fr 1.1fr;
   gap:60px;
   align-items:start;
 }
-
 .story-label {
   font-size:9px;
   font-weight:800;
   color:var(--brand-color);
   letter-spacing:1.5px;
 }
-
 .about-story h3 {
   font-size:32px;
   letter-spacing:-1.3px;
   line-height:1.4;
   margin:18px 0 23px;
 }
-
 .about-story>p:not(.story-label) {
   font-size:12px;
   line-height:2;
   color:var(--muted);
   margin-bottom:15px;
 }
-
 .about-tags {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
   margin-top:25px;
 }
-
 .about-tags span {
   background:var(--brand-light);
   color:var(--brand-color);
@@ -545,14 +465,32 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:700;
 }
+</style>
+</head>
 
+   
+  margin-bottom:15px;
+}
+.about-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:25px;
+}
+.about-tags span {
+  background:var(--brand-light);
+  color:var(--brand-color);
+  border-radius:30px;
+  padding:7px 12px;
+  font-size:9px;
+  font-weight:700;
+}
 .timeline-card {
   background:white;
   border:1px solid var(--line);
   border-radius:12px;
   padding:28px;
 }
-
 .timeline-heading {
   display:flex;
   justify-content:space-between;
@@ -562,19 +500,15 @@ button { cursor:pointer; }
   color:var(--brand-color);
   margin-bottom:24px;
 }
-
 .timeline {
   border-left:1px solid var(--brand-soft);
   margin-left:5px;
 }
-
 .timeline-item {
   padding:0 0 25px 24px;
   position:relative;
 }
-
 .timeline-item:last-child { padding-bottom:0; }
-
 .timeline-marker {
   position:absolute;
   left:-5px;
@@ -585,75 +519,83 @@ button { cursor:pointer; }
   background:var(--brand-color);
   box-shadow:0 0 0 4px var(--brand-light);
 }
-
 .timeline-type {
   color:var(--brand-color);
   font-size:8px;
   font-weight:800;
   letter-spacing:1px;
 }
-
 .timeline-item h4 {
   font-size:13px;
   margin:5px 0;
 }
-
 .timeline-item p {
   font-size:11px;
   color:var(--muted);
 }
-
 .timeline-item strong {
   font-size:11px;
   color:var(--brand-color);
 }
-
 /* =========================================
-   07. COMPETENCIES
+   07. EXPERIENCE
 ========================================= */
-
+.experience-section { background:white; }
+.experience-list { border-top:1px solid var(--line); }
+.experience-item {
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:22px;
+  align-items:center;
+  padding:20px 4px;
+  border-bottom:1px solid var(--line);
+}
+.experience-period {
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.experience-main h3 { font-size:13px; margin-bottom:5px; }
+.experience-main p { color:var(--muted); font-size:10px; line-height:1.8; }
+/* =========================================
+   08. COMPETENCIES
+========================================= */
 .competency-section { background:#F3F6FA; }
-
 .competency-intro {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
   margin-bottom:35px;
 }
-
 .competency-intro>div {
   background:white;
   border:1px solid var(--line);
   border-radius:8px;
   padding:19px 16px;
 }
-
 .competency-intro strong {
   display:block;
   color:var(--brand-color);
   font-size:22px;
 }
-
 .competency-intro span {
   display:block;
   font-size:9px;
   font-weight:800;
   margin:8px 0;
 }
-
 .competency-intro p {
   font-size:10px;
   color:var(--muted);
   line-height:1.7;
 }
-
 .competency-tabs {
   display:flex;
   flex-wrap:wrap;
   gap:9px;
   margin-bottom:30px;
 }
-
 .filter-button {
   border:1px solid #DDE4ED;
   background:transparent;
@@ -664,20 +606,17 @@ button { cursor:pointer; }
   font-weight:800;
   transition:.2s;
 }
-
 .filter-button:hover,
 .filter-button.active {
   background:var(--brand-color);
   color:white;
   border-color:var(--brand-color);
 }
-
 .project-grid {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:18px;
 }
-
 .project-card {
   background:white;
   border:1px solid var(--line);
@@ -688,13 +627,11 @@ button { cursor:pointer; }
   display:flex;
   flex-direction:column;
 }
-
 .project-card:hover {
   transform:translateY(-5px);
   border-color:var(--brand-color);
   box-shadow:0 15px 35px rgba(35,25,55,.08);
 }
-
 .project-image {
   height:165px;
   background:var(--brand-light);
@@ -703,7 +640,6 @@ button { cursor:pointer; }
   position:relative;
   overflow:hidden;
 }
-
 .project-image-art {
   width:105px;
   height:105px;
@@ -715,11 +651,9 @@ button { cursor:pointer; }
   font-size:39px;
   transition:.5s;
 }
-
 .project-card:hover .project-image-art {
   transform:scale(1.12) rotate(10deg);
 }
-
 .project-index {
   position:absolute;
   left:16px;
@@ -728,7 +662,6 @@ button { cursor:pointer; }
   font-weight:800;
   color:var(--brand-color);
 }
-
 .project-category-label {
   position:absolute;
   right:14px;
@@ -740,40 +673,34 @@ button { cursor:pointer; }
   font-size:8px;
   font-weight:800;
 }
-
 .project-content {
   padding:22px;
   display:flex;
   flex-direction:column;
   flex:1;
 }
-
 .project-type {
   font-size:9px;
   font-weight:800;
   color:var(--brand-color);
 }
-
 .project-content h3 {
   font-size:18px;
   letter-spacing:-.5px;
   line-height:1.45;
   margin:10px 0;
 }
-
 .project-content>p {
   font-size:11px;
   color:var(--muted);
   line-height:1.8;
 }
-
 .project-result {
   color:var(--brand-color);
   font-size:10px;
   font-weight:800;
   margin-top:14px;
 }
-
 .project-card-bottom {
   border-top:1px solid var(--line);
   margin-top:18px;
@@ -784,12 +711,10 @@ button { cursor:pointer; }
   font-weight:800;
   color:var(--muted);
 }
-
 .project-card-bottom strong {
   color:var(--brand-color);
   font-size:17px;
 }
-
 .project-footer {
   margin-top:25px;
   padding-top:17px;
@@ -800,19 +725,15 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
-
 /* =========================================
-   08. TOOLS
+   09. TOOLS
 ========================================= */
-
 .tools-section { background:white; }
-
 .tools-grid {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:15px;
 }
-
 .tool-card {
   border:1px solid var(--line);
   border-radius:9px;
@@ -820,19 +741,16 @@ button { cursor:pointer; }
   background:white;
   transition:.2s;
 }
-
 .tool-card:hover {
   transform:translateY(-3px);
   border-color:var(--brand-color);
 }
-
 .tool-card-heading {
   display:flex;
   align-items:center;
   gap:13px;
   margin-bottom:18px;
 }
-
 .tool-icon {
   width:42px;
   height:42px;
@@ -843,22 +761,18 @@ button { cursor:pointer; }
   place-items:center;
   font-size:22px;
 }
-
 .tool-card h3 { font-size:14px; }
-
 .tool-card-heading p {
   font-size:8px;
   color:var(--muted);
   letter-spacing:1px;
   font-weight:800;
 }
-
 .tool-tags {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
 }
-
 .tool-tags span {
   background:#F5F7FA;
   border:1px solid var(--line);
@@ -866,31 +780,25 @@ button { cursor:pointer; }
   border-radius:5px;
   font-size:10px;
 }
-
 /* =========================================
-   09. TA JOURNEY
+   10. TA JOURNEY
 ========================================= */
-
 .journey-section { background:white; }
-
 .journey-track {
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
   gap:10px;
 }
-
 .journey-step {
   flex:1;
   text-align:center;
 }
-
 .journey-step>span {
   font-size:10px;
   color:var(--brand-color);
   font-weight:800;
 }
-
 .journey-icon {
   width:72px;
   height:72px;
@@ -903,18 +811,15 @@ button { cursor:pointer; }
   font-size:29px;
   transition:.3s;
 }
-
 .journey-step:hover .journey-icon {
   background:var(--brand-color);
   color:white;
   transform:translateY(-5px);
 }
-
 .journey-step h3 {
   font-size:11px;
   letter-spacing:1px;
 }
-
 .journey-step p {
   max-width:175px;
   margin:9px auto;
@@ -922,74 +827,61 @@ button { cursor:pointer; }
   color:var(--muted);
   line-height:1.8;
 }
-
 .journey-line {
   flex:.35;
   height:1px;
   background:var(--brand-soft);
   margin-top:65px;
 }
-
 /* =========================================
-   10. PHILOSOPHY
+   11. PHILOSOPHY
 ========================================= */
-
 .philosophy-section {
   background:var(--brand-color);
   color:white;
 }
-
 .philosophy-section .eyebrow { color:white; opacity:.8; }
-
 .philosophy-inner {
   display:grid;
   grid-template-columns:1fr .9fr;
   gap:60px;
   align-items:center;
 }
-
 .philosophy-heading h2 {
   font-size:clamp(36px,5vw,58px);
   line-height:1.25;
   letter-spacing:-2px;
   margin:23px 0;
 }
-
 .philosophy-heading h2 span { color:var(--brand-light); }
-
 .philosophy-heading>p:last-child {
   font-size:12px;
   line-height:2;
   opacity:.88;
   max-width:430px;
 }
-
 .philosophy-interactive {
   background:white;
   color:var(--ink);
   border-radius:10px;
   padding:28px;
 }
-
 .question-label {
   color:var(--brand-color);
   font-size:9px;
   font-weight:800;
   letter-spacing:1px;
 }
-
 .philosophy-interactive h3 {
   font-size:21px;
   line-height:1.5;
   margin:16px 0 20px;
 }
-
 .answer-options {
   display:flex;
   flex-direction:column;
   gap:9px;
 }
-
 .answer-button {
   text-align:left;
   border:1px solid var(--line);
@@ -1000,14 +892,12 @@ button { cursor:pointer; }
   color:var(--ink);
   transition:.2s;
 }
-
 .answer-button:hover,
 .answer-button.selected {
   border-color:var(--brand-color);
   background:var(--brand-light);
   color:var(--brand-color);
 }
-
 .philosophy-response {
   background:var(--brand-light);
   border-radius:6px;
@@ -1017,48 +907,39 @@ button { cursor:pointer; }
   margin-top:16px;
   min-height:65px;
 }
-
 .values-grid {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:25px;
   margin-top:75px;
 }
-
 .value-item {
   border-top:1px solid rgba(255,255,255,.4);
   padding-top:18px;
 }
-
 .value-item>span { font-size:10px; opacity:.7; }
 .value-item h3 { font-size:17px; margin:12px 0; }
 .value-item p { font-size:10px; line-height:1.9; opacity:.85; }
-
 /* =========================================
-   11. CONTACT
+   12. CONTACT
 ========================================= */
-
 .contact-section {
   text-align:center;
   padding-top:120px;
   padding-bottom:120px;
 }
-
 .contact-section h2 {
   font-size:clamp(37px,6vw,68px);
   line-height:1.25;
   letter-spacing:-3px;
   margin:25px 0;
 }
-
 .contact-section h2 span { color:var(--brand-color); }
-
 .contact-description {
   font-size:12px;
   line-height:2;
   color:var(--muted);
 }
-
 .contact-email {
   display:inline-block;
   font-size:18px;
@@ -1068,7 +949,6 @@ button { cursor:pointer; }
   padding-bottom:6px;
   margin-top:30px;
 }
-
 .contact-socials {
   display:flex;
   justify-content:center;
@@ -1076,15 +956,12 @@ button { cursor:pointer; }
   margin-top:35px;
   flex-wrap:wrap;
 }
-
 .contact-socials a {
   font-size:9px;
   font-weight:800;
   letter-spacing:.7px;
 }
-
 .contact-socials a:hover { color:var(--brand-color); }
-
 .footer {
   border-top:1px solid var(--line);
   padding:25px 7%;
@@ -1095,16 +972,13 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
-
 .footer-logo {
   font-size:23px;
   color:var(--brand-color);
 }
-
 /* =========================================
-   12. PROJECT DETAIL MODAL
+   13. PROJECT DETAIL MODAL
 ========================================= */
-
 .project-modal {
   position:fixed;
   inset:0;
@@ -1114,14 +988,12 @@ button { cursor:pointer; }
   align-items:flex-start;
   padding:30px 14px;
 }
-
 .modal-overlay {
   position:absolute;
   inset:0;
   background:rgba(25,30,40,.72);
   backdrop-filter:blur(5px);
 }
-
 .modal-panel {
   position:relative;
   z-index:2;
@@ -1133,7 +1005,6 @@ button { cursor:pointer; }
   border-radius:12px;
   animation:modalIn .3s ease;
 }
-
 .modal-close {
   position:sticky;
   top:13px;
@@ -1148,30 +1019,25 @@ button { cursor:pointer; }
   font-size:23px;
   z-index:5;
 }
-
 .modal-hero {
   padding:60px 50px 38px;
   background:var(--brand-light);
 }
-
 .modal-category {
   font-size:9px;
   font-weight:800;
   letter-spacing:1px;
   color:var(--brand-color);
 }
-
 .modal-hero h2 {
   font-size:clamp(27px,4.5vw,40px);
   line-height:1.3;
   margin:17px 0;
 }
-
 .modal-hero>p {
   font-size:12px;
   color:var(--muted);
 }
-
 .modal-meta {
   display:flex;
   flex-wrap:wrap;
@@ -1179,74 +1045,60 @@ button { cursor:pointer; }
   margin-top:22px;
   font-size:10px;
 }
-
 .modal-meta span { color:var(--muted); }
 .modal-meta strong { color:var(--ink); margin-left:5px; }
-
 .modal-body { padding:40px 50px; }
-
 .modal-summary {
   font-size:14px;
   line-height:1.9;
   margin-bottom:30px;
 }
-
 .modal-stats {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:11px;
   margin:25px 0 40px;
 }
-
 .modal-stat {
   padding:18px 12px;
   background:white;
   border:1px solid var(--line);
   border-radius:7px;
 }
-
 .modal-stat strong {
   display:block;
   font-size:23px;
   color:var(--brand-color);
 }
-
 .modal-stat span {
   font-size:9px;
   color:var(--muted);
 }
-
 .detail-block {
   border-top:1px solid var(--line);
   padding:24px 0;
 }
-
 .detail-block h3 {
   font-size:12px;
   margin-bottom:12px;
 }
-
 .detail-block h3 span {
   color:var(--brand-color);
   margin-right:8px;
 }
-
 .detail-block p,
 .detail-block li {
   font-size:12px;
   line-height:2;
   color:var(--muted);
 }
-
 .detail-block ul { padding-left:18px; }
 .detail-block li { margin:5px 0; }
-
 .detail-tools {
   display:flex;
   flex-wrap:wrap;
   gap:8px;
 }
-
 .detail-tools span {
   border-radius:30px;
   padding:7px 11px;
@@ -1255,7 +1107,6 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
-
 .project-external-link {
   display:inline-flex;
   padding:11px 16px;
@@ -1265,7 +1116,6 @@ button { cursor:pointer; }
   font-size:10px;
   font-weight:800;
 }
-
 .modal-bottom {
   display:flex;
   justify-content:space-between;
@@ -1276,7 +1126,6 @@ button { cursor:pointer; }
   color:var(--muted);
   font-weight:800;
 }
-
 .modal-bottom button {
   border:0;
   background:transparent;
@@ -1284,64 +1133,56 @@ button { cursor:pointer; }
   font-size:9px;
   font-weight:800;
 }
-
 /* =========================================
-   13. ANIMATION & RESPONSIVE
+   14. ANIMATION & RESPONSIVE
 ========================================= */
-
 @keyframes float {
   0%,100% { transform:translateY(0); }
   50% { transform:translateY(-10px); }
 }
-
 @keyframes rotate {
   to { transform:rotate(360deg); }
 }
-
 @keyframes modalIn {
   from { opacity:0; transform:translateY(18px); }
   to { opacity:1; transform:translateY(0); }
 }
-
 .reveal {
   opacity:0;
   transform:translateY(22px);
   transition:.6s ease;
 }
-
 .reveal.visible {
   opacity:1;
   transform:translateY(0);
 }
-
 button:focus-visible,
 a:focus-visible,
 .project-card:focus-visible {
   outline:3px solid var(--brand-color);
   outline-offset:4px;
 }
-
+@media(min-width:901px) {
+  .section-subtitle { font-size:calc(12px + .5pt); }
+  .tool-tags span { font-size:calc(10px + .5pt); }
+}
 @media(max-width:900px) {
   .about-grid,.philosophy-inner { grid-template-columns:1fr; gap:38px; }
   .competency-intro { grid-template-columns:repeat(2,1fr); }
+  .experience-item { grid-template-columns:150px 1fr; }
 }
-
 @media(max-width:650px) {
   .section { padding:72px 6%; }
-
   .section-heading {
     flex-direction:column;
     align-items:flex-start;
     gap:12px;
   }
-
   .entry-screen { padding:24px 6%; }
   .entry-content { margin:60px 0; }
   .entry-content h1 { letter-spacing:-2px; }
-
   .navbar { padding:0 6%; height:64px; }
   .mobile-menu-button { display:block; }
-
   .nav-links {
     display:none;
     position:absolute;
@@ -1355,18 +1196,73 @@ a:focus-visible,
     align-items:flex-start;
     gap:18px;
   }
-
   .nav-links.open { display:flex; }
-
   .theme-button { margin-left:auto; margin-right:13px; }
-
   .hero { padding:60px 6% 32px; }
-
   .hero-inner { grid-template-columns:1fr; }
-
   .hero-copy h1 {
     font-size:42px;
     letter-spacing:-2px;
+  }
+  .hero-visual { min-height:310px; }
+  .hero-orbit { width:260px; height:260px; }
+  .orbit-two { width:310px; height:310px; }
+  .hero-circle { width:165px; height:165px; }
+  .hero-circle strong { font-size:68px; }
+  .quick-profile {
+    grid-template-columns:repeat(2,1fr);
+    padding:23px 5%;
+  }
+  .quick-profile>div:nth-child(2) { border-right:0; }
+  .project-grid,.tools-grid { grid-template-columns:1fr; }
+  .journey-track {
+    flex-direction:column;
+    gap:15px;
+  }
+  .journey-step {
+    width:100%;
+    display:grid;
+    grid-template-columns:35px 52px 1fr;
+    align-items:center;
+    text-align:left;
+    gap:8px;
+  }
+  .journey-icon {
+    width:45px;
+    height:45px;
+    margin:0;
+    font-size:22px;
+    grid-row:1/3;
+  }
+  .journey-step>span { grid-row:1/3; }
+  .journey-step h3,.journey-step p { grid-column:3; }
+  .journey-step p { margin:0; max-width:none; }
+  .journey-line { display:none; }
+  .values-grid { grid-template-columns:repeat(2,1fr); gap:20px; }
+  .contact-section h2 {
+    font-size:38px;
+    letter-spacing:-1.5px;
+  }
+  .footer { flex-wrap:wrap; gap:10px; }
+  .project-modal { padding:10px 7px; }
+  .modal-panel { max-height:calc(100vh - 20px); }
+  .modal-hero { padding:52px 23px 28px; }
+  .modal-body { padding:27px 23px; }
+  .modal-stats { gap:7px; }
+  .modal-stat { padding:13px 7px; }
+  .modal-stat strong { font-size:18px; }
+  .modal-bottom { padding:16px 22px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+
+   
   }
 
   .hero-visual { min-height:310px; }
@@ -1385,6 +1281,7 @@ a:focus-visible,
   .quick-profile>div:nth-child(2) { border-right:0; }
 
   .project-grid,.tools-grid { grid-template-columns:1fr; }
+  .experience-item { grid-template-columns:1fr; gap:7px; }
 
   .journey-track {
     flex-direction:column;
@@ -1546,6 +1443,7 @@ a:focus-visible,
 
     <div class="nav-links">
       <a href="#about">ABOUT</a>
+      <a href="#experience">EXPERIENCE</a>
       <a href="#competencies">COMPETENCIES</a>
       <a href="#tools">TOOLS</a>
       <a href="#perspective">MY PERSPECTIVE</a>
@@ -1625,7 +1523,7 @@ a:focus-visible,
         </div>
 
         <div class="floating-note note-four">
-          <span>04</span> CONFIDENTIALITY
+          <span>04</span> BRANDING
         </div>
 
       </div>
@@ -1780,6 +1678,83 @@ a:focus-visible,
   </section>
 
 
+  <!-- EXPERIENCE -->
+
+  <section id="experience" class="section experience-section">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">02 / EXPERIENCE</p>
+        <h2>Experience<span class="accent">.</span></h2>
+      </div>
+      <p class="section-subtitle">
+        다양한 조직과 프로젝트에서 사람을 만나고,
+        운영과 콘텐츠를 직접 기획하며 쌓은 경험입니다.
+      </p>
+    </div>
+
+    <div class="experience-list">
+
+      <article class="experience-item">
+        <span class="experience-period">2025.07 – 2025.08</span>
+        <div class="experience-main">
+          <h3>The University of Edinburgh · Barrier-free Video Project</h3>
+          <p>팀장으로서 사회적 소수자의 이동권을 주제로 영상 프로젝트를 기획하고 제작했습니다. 경기도미래세대재단 대표이사장상을 수상했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2025.03 – 2026.02</span>
+        <div class="experience-main">
+          <h3>Ewha International Law Society · HR Director</h3>
+          <p>신입회원 모집과 면접 일정 조율, 구성원 출결·활동 관리, 온보딩 가이드 제작 등 인사 운영을 담당했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2024.01 – 2024.04</span>
+        <div class="experience-main">
+          <h3>The University of British Columbia · Exchange Student</h3>
+          <p>캐나다 밴쿠버에서 교환학생으로 수학하며 다양한 문화적 배경을 가진 구성원들과 교류했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2022.08 – 2023.01</span>
+        <div class="experience-main">
+          <h3>Ewha Womans University · Reporter</h3>
+          <p>대학 관련 소식을 취재하고 기사와 콘텐츠를 작성했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2022.08 – 2022.12</span>
+        <div class="experience-main">
+          <h3>Korea Press Foundation · Fact-checking Ambassador</h3>
+          <p>팩트체크 콘텐츠를 제작하고 자막을 포함한 홍보 영상을 제작했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2021.03 – 2022.12</span>
+        <div class="experience-main">
+          <h3>Ewha Womans University · Humanities Student Council</h3>
+          <p>인문과학대학 학생회 기획국장으로서 행사와 조직 운영을 기획하고 구성원 간 업무를 조율했습니다.</p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <span class="experience-period">2021.03 – 2022.12</span>
+        <div class="experience-main">
+          <h3>Ewha Womans University · Admissions Supporters</h3>
+          <p>입학처 서포터즈로 활동하며 수험생 대상 정보 콘텐츠와 온라인 멘토링을 지원했습니다.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
   <!-- COMPETENCIES -->
 
   <section id="competencies" class="section competency-section">
@@ -1787,345 +1762,221 @@ a:focus-visible,
     <div class="section-heading">
 
       <div>
-        <p class="eyebrow">02 / WHAT I BRING</p>
+        <p class="eyebrow">03 / WHAT I BRING</p>
+
+         
+        <p class="eyebrow">03 / WHAT I BRING</p>
         <h2>Core Competencies<span class="accent">.</span></h2>
       </div>
-
       <p class="section-subtitle">
         Talent Acquisition 업무에 필요한 네 가지 역량과
         이를 증명하는 주요 프로젝트를 소개합니다.
       </p>
-
     </div>
-
-
     <div class="competency-intro">
-
       <div>
         <strong>01</strong>
         <span>METICULOUSNESS · 꼼꼼함</span>
         <p>세부 사항까지 확인하고 정확한 운영 기준을 지킵니다.</p>
       </div>
-
       <div>
         <strong>02</strong>
         <span>EXECUTION · 실행력</span>
         <p>문제를 발견하는 데 그치지 않고 개선을 실행합니다.</p>
       </div>
-
       <div>
         <strong>03</strong>
         <span>COMMUNICATION · 커뮤니케이션</span>
         <p>상대의 입장을 살피고 명확하게 소통합니다.</p>
       </div>
-
       <div>
         <strong>04</strong>
-        <span>CONFIDENTIALITY · 비밀 유지</span>
-        <p>업무상 알게 된 정보를 책임감 있게 관리합니다.</p>
+        <span>BRANDING · 브랜딩</span>
+        <p>채용 브랜딩과 기업 브랜딩으로 조직의 가치와 매력을 전달합니다.</p>
       </div>
-
     </div>
-
-
     <div class="competency-tabs">
-
       <button class="filter-button active" data-filter="all">
         ALL PROJECTS
       </button>
-
       <button class="filter-button" data-filter="meticulousness">
         01 METICULOUSNESS
       </button>
-
       <button class="filter-button" data-filter="execution">
         02 EXECUTION
       </button>
-
       <button class="filter-button" data-filter="communication">
         03 COMMUNICATION
       </button>
-
-      <button class="filter-button" data-filter="confidentiality">
-        04 CONFIDENTIALITY
+      <button class="filter-button" data-filter="branding">
+        04 BRANDING
       </button>
-
     </div>
-
-
     <div class="project-grid" id="project-grid"></div>
-
     <div class="project-footer">
       <span>프로젝트 카드를 클릭하면 상세 내용을 확인할 수 있습니다.</span>
       <span id="project-count"></span>
     </div>
-
   </section>
-
-
-  <!-- TOOLS -->
-
   <section id="tools" class="section tools-section">
-
     <div class="section-heading">
-
       <div>
-        <p class="eyebrow">03 / TOOLS & SKILLS</p>
+        <p class="eyebrow">04 / TOOLS & SKILLS</p>
         <h2>Tools I Use<span class="accent">.</span></h2>
       </div>
-
       <p class="section-subtitle">
         문서 작성부터 데이터 관리, 콘텐츠 제작과 웹 구현까지
         목적에 맞는 도구를 활용합니다.
       </p>
-
     </div>
-
     <div class="tools-grid" id="tools-grid"></div>
-
   </section>
-
-
-  <!-- TA JOURNEY -->
-
   <section class="journey-section section">
-
     <div class="section-heading">
-
       <div>
-        <p class="eyebrow">04 / THE BIG PICTURE</p>
+        <p class="eyebrow">05 / THE BIG PICTURE</p>
         <h2>The Hiring Journey<span class="accent">.</span></h2>
       </div>
-
       <p class="section-subtitle">
         채용은 합격자를 선발하는 순간에 끝나는 것이 아니라,
         조직과 사람의 관계가 시작되는 과정이라고 생각합니다.
       </p>
-
     </div>
-
-
     <div class="journey-track">
-
       <div class="journey-step">
         <span>01</span>
         <div class="journey-icon">◎</div>
         <h3>ATTRACT</h3>
         <p>조직의 매력을 알리고 적합한 인재와 만납니다.</p>
       </div>
-
       <div class="journey-line"></div>
-
       <div class="journey-step">
         <span>02</span>
         <div class="journey-icon">⌕</div>
         <h3>SELECT</h3>
         <p>일관된 기준과 체계적인 프로세스로 선발합니다.</p>
       </div>
-
       <div class="journey-line"></div>
-
       <div class="journey-step">
         <span>03</span>
         <div class="journey-icon">♡</div>
         <h3>CONNECT</h3>
         <p>모든 접점에서 존중받는 지원자 경험을 만듭니다.</p>
       </div>
-
       <div class="journey-line"></div>
-
       <div class="journey-step">
         <span>04</span>
         <div class="journey-icon">↗</div>
         <h3>WELCOME</h3>
         <p>새로운 구성원이 조직에 잘 적응하도록 돕습니다.</p>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- PHILOSOPHY -->
-
   <section id="perspective" class="philosophy-section section">
-
     <div class="philosophy-inner">
-
       <div class="philosophy-heading">
-
-        <p class="eyebrow">05 / MY PERSPECTIVE</p>
-
+        <p class="eyebrow">06 / MY PERSPECTIVE</p>
         <h2>
           What makes a
           <br><span>good hiring experience?</span>
         </h2>
-
         <p>
           채용은 단순히 빈자리를 채우는 일이 아닙니다.
           지원자가 조직을 처음 만나는 순간부터 입사 후 적응하는 과정까지,
           모든 접점이 조직의 인상을 만듭니다.
           저는 지원자와 조직 모두를 고려하는 채용을 지향합니다.
         </p>
-
       </div>
-
-
       <div class="philosophy-interactive">
-
         <p class="question-label">WHAT MATTERS TO A CANDIDATE?</p>
-
         <h3>
           면접을 마친 지원자가 오래 기억하는 것은 무엇일까요?
         </h3>
-
         <div class="answer-options">
-
           <button class="answer-button" data-answer="a">
             A. 면접에서 받은 질문
           </button>
-
           <button class="answer-button" data-answer="b">
             B. 전형 과정에서 존중받았던 경험
           </button>
-
           <button class="answer-button" data-answer="c">
             C. 결과를 안내받기까지 걸린 시간
           </button>
-
         </div>
-
         <div id="philosophy-response" class="philosophy-response">
           답변을 선택하면 저의 생각을 확인할 수 있습니다.
         </div>
-
       </div>
-
     </div>
-
-
     <div class="values-grid">
-
       <div class="value-item">
         <span>01</span>
         <h3>Meticulousness</h3>
         <p>작은 안내와 빠짐없는 확인이 지원자의 경험을 바꿀 수 있다고 생각합니다.</p>
       </div>
-
       <div class="value-item">
         <span>02</span>
         <h3>Execution</h3>
         <p>문제를 발견하면 실제 변화를 만들기 위해 실행하는 태도를 중요하게 생각합니다.</p>
       </div>
-
       <div class="value-item">
         <span>03</span>
         <h3>Communication</h3>
         <p>상대방의 입장을 이해하고 필요한 정보를 명확하게 전달합니다.</p>
       </div>
-
       <div class="value-item">
         <span>04</span>
-        <h3>Confidentiality</h3>
-        <p>신뢰를 바탕으로 업무상 정보를 신중하고 책임감 있게 다룹니다.</p>
+        <h3>Branding</h3>
+        <p>조직의 정체성과 매력을 대상에 맞는 메시지와 콘텐츠로 전달합니다.</p>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- CONTACT -->
-
   <section id="contact" class="contact-section section">
-
-    <p class="eyebrow">06 / CONTACT</p>
-
+    <p class="eyebrow">07 / CONTACT</p>
     <h2>
       Let's create
       <br><span>better hiring experiences.</span>
     </h2>
-
     <p class="contact-description">
       제 경험과 가능성을 살펴봐 주셔서 감사합니다.
       <br>새로운 연결을 기다리겠습니다.
     </p>
-
     <a href="mailto:jyoungseon8@gmail.com" class="contact-email">
       jyoungseon8@gmail.com ↗
     </a>
-
     <div class="contact-socials">
-
       <a href="https://www.linkedin.com/in/youngseon/"
          target="_blank" rel="noopener noreferrer">
         LINKEDIN ↗
       </a>
-
-      <a href="https://github.com/jyoungseon"
-         target="_blank" rel="noopener noreferrer">
-        GITHUB ↗
-      </a>
-
       <a href="https://jyoungseon.github.io/hrdesign/"
          target="_blank" rel="noopener noreferrer">
         HR DESIGN PORTFOLIO ↗
       </a>
-
     </div>
-
   </section>
-
-
   <footer class="footer">
-
     <a href="#home" class="footer-logo">YSJ.</a>
-
     <span>People First, Process Excellence.</span>
-
     <span>© 2026 YOUNGSEON JUNG</span>
-
   </footer>
-
 </div>
-
-
-<!-- =====================================
-     PROJECT DETAIL MODAL
-===================================== -->
-
 <div id="project-modal" class="project-modal hidden" role="dialog" aria-modal="true">
-
   <div class="modal-overlay" id="modal-overlay"></div>
-
   <div class="modal-panel">
-
     <button id="modal-close" class="modal-close">×</button>
-
     <div id="modal-content"></div>
-
     <div class="modal-bottom">
       <span>YOUNGSEON JUNG · TA PORTFOLIO</span>
       <button id="modal-bottom-close">BACK TO PROJECTS ↑</button>
     </div>
-
   </div>
-
 </div>
-
-
-<!-- =====================================
-     JAVASCRIPT
-===================================== -->
-
 <script>
-
 /* ---------------------------------------
    01. COLOR DICTIONARY
 --------------------------------------- */
-
 const DEFAULT_COLOR = "#2864B8";
-
 const colorNames = {
   red:"#D94A4A",
   blue:"#2864B8",
@@ -2157,14 +2008,10 @@ const colorNames = {
   charcoal:"#383838",
   ivory:"#F3EEDC"
 };
-
-
 /* ---------------------------------------
    02. PROJECT DATA
 --------------------------------------- */
-
 const projects = [
-
 {
   id:"eils-recruitment",
   number:"01",
@@ -2177,33 +2024,25 @@ const projects = [
   subtitle:"Standardizing evaluation and streamlining interview scheduling.",
   description:"신입회원 모집 과정에서 지원자 평가 기준을 마련하고 면접 일정 조율 및 현장 운영을 지원했습니다.",
   icon:"◎",
-
   stats:[
     {value:"30",label:"APPLICANTS"},
     {value:"12",label:"INTERVIEWEES"},
     {value:"67%",label:"TIME SAVED"}
   ],
-
   background:"신입회원 모집 과정에서 다수 지원자의 서류를 일관된 기준으로 평가하고 면접 대상자의 가능 시간을 효율적으로 조율해야 했습니다.",
-
   problem:"수작업으로 진행하던 면접 일정 조율에 약 1시간이 소요됐으며, 지원자별 평가의 일관성과 면접 당일 진행 상황을 한눈에 확인할 수 있는 관리 방식이 필요했습니다.",
-
   actions:[
     "지원자 30명의 서류 평가표를 작성하고 통일된 채점 기준을 마련했습니다.",
     "서류 합격자 중 면접 대상자 12명의 가능 시간을 취합했습니다.",
     "AI 도구를 활용해 면접 일정을 조율한 뒤 일정 중복 여부를 직접 검토했습니다.",
     "지원자별 면접 시간과 순서를 Excel로 정리해 당일 운영 상황을 확인할 수 있도록 했습니다."
   ],
-
   result:"면접 일정 조율 소요 시간을 약 1시간에서 20분으로 단축해 업무 시간을 약 67% 절감했습니다.",
-
   contribution:"지원자 서류 평가 기준 마련, 면접 일정 취합·조율, 일정 검수 및 면접 당일 운영 자료 정리를 담당했습니다.",
-
   tools:["Excel","AI Tools"],
   tags:["Recruitment","Screening","Scheduling","Process Improvement"],
   highlight:"60 min → 20 min"
 },
-
 {
   id:"student-council-interview",
   number:"02",
@@ -2216,72 +2055,56 @@ const projects = [
   subtitle:"Evaluating candidates through role-based questions.",
   description:"기획국의 주요 업무와 필요 역량을 바탕으로 면접 질문을 직접 설계하고 지원자 평가 및 선발에 참여했습니다.",
   icon:"⌕",
-
   stats:[
     {value:"COMMON",label:"QUESTION DESIGN"},
     {value:"INDIVIDUAL",label:"QUESTIONS"},
     {value:"INTERVIEWER",label:"ROLE"}
   ],
-
   background:"기획국의 업무를 함께 수행할 신규 구성원을 모집하면서 지원자의 경험과 역할 적합성을 함께 살펴볼 필요가 있었습니다.",
-
   problem:"지원자마다 경험과 강점이 다른 만큼 동일한 질문만으로는 개별 역량을 충분히 파악하기 어려웠습니다.",
-
   actions:[
     "기획국의 주요 업무와 필요 역량을 바탕으로 공통 면접 질문을 직접 설계했습니다.",
     "지원자별 경험과 특성을 고려한 개별 질문을 구성했습니다.",
     "면접관으로 참여해 지원자의 답변과 역량을 평가했습니다.",
     "평가 결과를 바탕으로 신규 구성원 선발에 참여했습니다."
   ],
-
   result:"공통 질문으로 기본 역량을 확인하고 개별 질문으로 지원자별 경험을 살펴보는 면접 방식을 운영했습니다.",
-
   contribution:"면접 질문 설계, 지원자별 질문 구성, 면접 진행 및 평가에 참여했습니다.",
-
   tools:["Interview Design","Evaluation Criteria"],
   tags:["Interviewing","Talent Selection","Evaluation"],
   highlight:"Structured Interviews"
 },
-
 {
   id:"eils-candidate",
   number:"03",
-  category:"communication",
-  categoryName:"COMMUNICATION",
+  category:"branding",
+  categoryName:"BRANDING",
   organization:"Ewha International Law Society",
   role:"HR Director",
   period:"2025",
-  title:"Designing a Considerate Interview Experience",
-  subtitle:"Making every interaction more comfortable and transparent.",
+  title:"Building Recruitment Branding through Candidate Experience",
+  subtitle:"Communicating organizational values through every candidate touchpoint.",
   description:"지원자가 학회를 처음 만나는 채용 과정에서 안내와 소통의 접점을 세심하게 설계했습니다.",
   icon:"♡",
-
   stats:[
     {value:"BEFORE",label:"INTERVIEW GUIDANCE"},
     {value:"DURING",label:"INTERVIEW EXPERIENCE"},
     {value:"AFTER",label:"CANDIDATE FEEDBACK"}
   ],
-
   background:"면접은 지원자가 조직을 처음 경험하는 중요한 접점입니다. 평가뿐 아니라 지원자가 느끼는 긴장과 정보의 불확실성도 고려해야 한다고 생각했습니다.",
-
   problem:"낯선 면접 장소와 진행 방식은 지원자에게 부담이 될 수 있어 전형 전후로 필요한 정보를 명확하게 안내하고 편안하게 대화할 수 있는 환경을 마련하고자 했습니다.",
-
   actions:[
     "면접실과 대기실 위치 및 이용 안내를 준비했습니다.",
     "면접 당일 지원자가 편안하게 이야기할 수 있도록 분위기를 고려했습니다.",
     "면접 진행 과정에서 지원자에게 필요한 안내를 제공했습니다.",
     "불합격자에게 피드백을 전달해 결과 안내 과정의 소통을 보완했습니다."
   ],
-
   result:"면접 전·중·후의 안내와 소통을 세심하게 살피며 지원자 관점의 채용 경험을 실천했습니다.",
-
   contribution:"면접 공간 안내, 현장 응대, 면접 분위기 조성 및 불합격자 피드백을 담당했습니다.",
-
   tools:["Communication","Interview Operations","Information Design"],
   tags:["Candidate Experience","Interview Branding","Candidate Communication"],
   highlight:"Every Touchpoint Matters"
 },
-
 {
   id:"admissions-db",
   number:"04",
@@ -2294,18 +2117,16 @@ const projects = [
   subtitle:"Improving response consistency through structured information management.",
   description:"수험생의 질문을 수집하고 정확한 입학 정보를 확인해 답변을 축적하는 온라인 멘토링 DB를 구축했습니다.",
   icon:"▤",
-
   stats:[
     {value:"GOOGLE",label:"FORMS"},
     {value:"Q&A",label:"DATABASE"},
     {value:"1,900",label:"VIDEO VIEWS"}
   ],
-
   background:"수험생들이 입학 전형과 대학생활에 관해 유사한 질문을 반복적으로 남겼습니다. 정확하고 일관된 답변을 제공할 수 있는 자료가 필요했습니다.",
-
   problem:"반복 문의에 매번 새롭게 답변하면 대응 효율이 낮아지고 안내 내용의 일관성을 유지하기 어려울 수 있었습니다.",
-
   actions:[
+
+   
     "Google Forms로 수험생 질문을 수집했습니다.",
     "질문별 관련 입학 정보를 확인한 뒤 정확한 답변을 작성했습니다.",
     "Google Docs에 질문과 답변을 축적해 Q&A 데이터베이스를 구축했습니다.",
@@ -2402,13 +2223,13 @@ const projects = [
 {
   id:"hr-design",
   number:"07",
-  category:"execution",
-  categoryName:"EXECUTION",
+  category:"branding",
+  categoryName:"BRANDING",
   organization:"Independent Portfolio Project",
   role:"Content Planner & Designer",
   period:"2026",
-  title:"HR Design Portfolio",
-  subtitle:"Communicating information through visual storytelling.",
+  title:"Corporate Branding through HR Design",
+  subtitle:"Building a consistent visual identity through HR content.",
   description:"그래픽 디자인, 프레젠테이션, 에디토리얼, 영상 콘텐츠를 정리한 HR 디자인 포트폴리오입니다.",
   icon:"✳",
 
@@ -2583,317 +2404,7 @@ const toolGroups = [
 
 ];
 
-
-/* ---------------------------------------
-   04. COLOR FUNCTIONS
---------------------------------------- */
-
-const $ = selector => document.querySelector(selector);
-
-const root = document.documentElement;
-
-let currentColor = DEFAULT_COLOR;
-let previousFocus = null;
-
-const colorInput = $("#company-color");
-const colorPicker = $("#color-picker");
-const colorDot = $("#color-dot");
-const colorPreviewName = $("#color-preview-name");
-const colorHex = $("#color-hex");
-const colorError = $("#color-error");
-
-function normalizeColor(value) {
-  return value.trim().toLowerCase().replace(/\s+/g," ");
-}
-
-function getColorValue(value) {
-
-  const normalized = normalizeColor(value);
-
-  if (!normalized) return null;
-
-  if (colorNames[normalized]) {
-    return colorNames[normalized];
-  }
-
-  const hex = normalized.replace(/^#/,"");
-
-  if (/^([0-9a-f]{3}|[0-9a-f]{6})$/i.test(hex)) {
-    return "#" + hex;
-  }
-
-  if (CSS.supports("color",normalized)) {
-    return normalized;
-  }
-
-  return null;
-}
-
-function getDisplayColor(value) {
-
-  const normalized = normalizeColor(value);
-
-  if (colorNames[normalized]) {
-    return normalized.replace(/\b\w/g,c => c.toUpperCase());
-  }
-
-  return value.toUpperCase();
-}
-
-function contrastColor(color) {
-
-  const probe = document.createElement("span");
-
-  probe.style.color = color;
-
-  document.body.appendChild(probe);
-
-  const rgb = getComputedStyle(probe).color.match(/\d+/g);
-
-  probe.remove();
-
-  if (!rgb || rgb.length < 3) return "#FFFFFF";
-
-  const channels = rgb.slice(0,3).map(v => {
-
-    const c = Number(v)/255;
-
-    return c <= .04045
-      ? c/12.92
-      : Math.pow((c+.055)/1.055,2.4);
-
-  });
-
-  const luminance =
-    .2126*channels[0] +
-    .7152*channels[1] +
-    .0722*channels[2];
-
-  return luminance > .42 ? "#252525" : "#FFFFFF";
-}
-
-function rgbToHex(color) {
-
-  const probe = document.createElement("span");
-
-  probe.style.color = color;
-
-  document.body.appendChild(probe);
-
-  const rgb = getComputedStyle(probe).color.match(/\d+/g);
-
-  probe.remove();
-
-  if (!rgb || rgb.length < 3) return DEFAULT_COLOR;
-
-  return "#" + rgb.slice(0,3)
-    .map(v => Number(v).toString(16).padStart(2,"0"))
-    .join("");
-}
-
-function previewColor(value) {
-
-  const color = getColorValue(value);
-
-  if (!color) {
-
-    colorError.textContent =
-      "Please enter a valid color name or HEX code.";
-
-    return null;
-  }
-
-  colorError.textContent = "";
-
-  colorDot.style.background = color;
-
-  colorPreviewName.textContent = getDisplayColor(value);
-
-  colorHex.textContent = color.toUpperCase();
-
-  return color;
-}
-
-function applyTheme(color,updateURL=true) {
-
-  currentColor = color;
-
-  root.style.setProperty("--brand-color",color);
-
-  root.style.setProperty("--on-brand",contrastColor(color));
-
-  colorDot.style.background = color;
-
-  colorHex.textContent = color.toUpperCase();
-
-  colorPicker.value = rgbToHex(color);
-
-  const meta = document.querySelector('meta[name="theme-color"]');
-
-  if (meta) meta.content = color;
-
-  if (updateURL) {
-
-    const url = new URL(location.href);
-
-    url.searchParams.set("color",color.replace("#",""));
-
-    history.replaceState({},"",url);
-
-  }
-}
-
-
-/* ---------------------------------------
-   05. ENTRY & THEME
---------------------------------------- */
-
-const entryScreen = $("#entry-screen");
-
-const portfolio = $("#portfolio");
-
-function showPortfolio(color,updateURL=true) {
-
-  applyTheme(color,updateURL);
-
-  entryScreen.classList.add("hidden");
-
-  portfolio.classList.remove("hidden");
-
-  window.scrollTo({top:0,behavior:"instant"});
-
-  initReveal();
-}
-
-colorInput.addEventListener("input",() => {
-  previewColor(colorInput.value);
-});
-
-colorPicker.addEventListener("input",() => {
-
-  colorInput.value = colorPicker.value;
-
-  previewColor(colorInput.value);
-
-});
-
-$("#enter-button").addEventListener("click",() => {
-
-  const color = previewColor(colorInput.value);
-
-  if (color) showPortfolio(color);
-
-});
-
-colorInput.addEventListener("keydown",event => {
-
-  if (event.key === "Enter") {
-    $("#enter-button").click();
-  }
-
-});
-
-$("#default-button").addEventListener("click",() => {
-
-  colorInput.value = "blue";
-
-  showPortfolio(DEFAULT_COLOR);
-
-});
-
-$("#change-theme").addEventListener("click",() => {
-
-  entryScreen.classList.remove("hidden");
-
-  portfolio.classList.add("hidden");
-
-  colorInput.value = currentColor;
-
-  previewColor(currentColor);
-
-  window.scrollTo({top:0,behavior:"instant"});
-
-});
-
-
-/* ---------------------------------------
-   06. PROJECT RENDERING
---------------------------------------- */
-
-function escapeHTML(value="") {
-
-  return String(value).replace(/[&<>"']/g,c => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#039;"
-  })[c]);
-
-}
-
-const categoryLabels = {
-  meticulousness:"METICULOUSNESS · 꼼꼼함",
-  execution:"EXECUTION · 실행력",
-  communication:"COMMUNICATION · 커뮤니케이션",
-  confidentiality:"CONFIDENTIALITY · 비밀 유지"
-};
-
-function renderProjects(filter="all") {
-
-  const filtered = projects.filter(project =>
-    filter === "all" || project.category === filter
-  );
-
-  $("#project-grid").innerHTML = filtered.map(project => `
-
-    <article
-      class="project-card"
-      data-project-id="${escapeHTML(project.id)}"
-      tabindex="0"
-      role="button"
-      aria-label="${escapeHTML(project.title)}"
-    >
-
-      <div class="project-image">
-
-        <span class="project-index">
-          PROJECT ${escapeHTML(project.number)}
-        </span>
-
-        <div class="project-image-art">
-          ${escapeHTML(project.icon)}
-        </div>
-
-        <span class="project-category-label">
-          ${escapeHTML(categoryLabels[project.category])}
-        </span>
-
-      </div>
-
-      <div class="project-content">
-
-        <span class="project-type">
-          ${escapeHTML(project.organization)}
-        </span>
-
-        <h3>${escapeHTML(project.title)}</h3>
-
-        <p>${escapeHTML(project.description)}</p>
-
-        <span class="project-result">
-          ✦ ${escapeHTML(project.highlight)}
-        </span>
-
-        <div class="project-card-bottom">
-
-          <span>
-            ${escapeHTML(project.period)}
-            · ${escapeHTML(project.role)}
-          </span>
-
-          <strong>↗</strong>
-
+   
         </div>
 
       </div>
@@ -2903,34 +2414,9 @@ function renderProjects(filter="all") {
   `).join("");
 
   $("#project-count").textContent =
-    `${filtered.length} PROJECTS`;
-
-  document.querySelectorAll(".project-card").forEach(card => {
-
-    card.addEventListener("click",() => {
-      openProject(card.dataset.projectId);
-    });
-
-    card.addEventListener("keydown",event => {
-
-      if (event.key === "Enter" || event.key === " ") {
-
-        event.preventDefault();
-
-        openProject(card.dataset.projectId);
-
-      }
-
-    });
-
-  });
+    `${filtered.length} PROJECT${filtered.length === 1 ? "" : "S"}`;
 
 }
-
-
-/* ---------------------------------------
-   07. PROJECT FILTER
---------------------------------------- */
 
 document.querySelectorAll(".filter-button").forEach(button => {
 
@@ -2948,18 +2434,479 @@ document.querySelectorAll(".filter-button").forEach(button => {
 
 });
 
+function renderTools() {
+
+  $("#tools-grid").innerHTML = toolGroups.map(group => `
+
+    <article class="tool-card">
+
+      <div class="tool-card-heading">
+
+        <div class="tool-icon">
+          ${escapeHTML(group.icon)}
+        </div>
+
+        <div>
+          <h3>${escapeHTML(group.name)}</h3>
+          <p>${escapeHTML(group.english)}</p>
+        </div>
+
+      </div>
+
+      <div class="tool-tags">
+
+        ${group.tools.map(tool => `
+          <span>${escapeHTML(tool)}</span>
+        `).join("")}
+
+      </div>
+
+    </article>
+
+  `).join("");
+
+}
+
 
 /* ---------------------------------------
-   08. PROJECT DETAIL
+   07. PROJECT DETAIL MODAL
+--------------------------------------- */
+
+const projectModal = $("#project-modal");
+
+const modalContent = $("#modal-content");
+
+function openProject(projectId) {
+
+  const project = projects.find(item => item.id === projectId);
+
+  if (!project) return;
+
+  previousFocus = document.activeElement;
+
+  const statsHTML = project.stats.map(stat => `
+
+    <div class="modal-stat">
+      <strong>${escapeHTML(stat.value)}</strong>
+      <span>${escapeHTML(stat.label)}</span>
+    </div>
+
+  `).join("");
+
+  const actionsHTML = project.actions.map(action => `
+
+    <li>${escapeHTML(action)}</li>
+
+  `).join("");
+
+  const toolsHTML = project.tools.map(tool => `
+
+    <span>${escapeHTML(tool)}</span>
+
+  `).join("");
+
+  modalContent.innerHTML = `
+
+    <div class="modal-hero">
+
+      <span class="modal-category">
+        ${escapeHTML(categoryLabels[project.category])}
+      </span>
+
+      <h2>${escapeHTML(project.title)}</h2>
+
+      <p>${escapeHTML(project.subtitle)}</p>
+
+      <div class="modal-meta">
+
+        <span>
+          Organization
+          <strong>${escapeHTML(project.organization)}</strong>
+        </span>
+
+        <span>
+          Role
+          <strong>${escapeHTML(project.role)}</strong>
+        </span>
+
+        <span>
+          Period
+          <strong>${escapeHTML(project.period)}</strong>
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="modal-body">
+
+      <p class="modal-summary">
+        ${escapeHTML(project.description)}
+      </p>
+
+      <div class="modal-stats">
+        ${statsHTML}
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>01</span> BACKGROUND</h3>
+
+        <p>${escapeHTML(project.background)}</p>
+
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>02</span> CHALLENGE</h3>
+
+        <p>${escapeHTML(project.problem)}</p>
+
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>03</span> ACTIONS</h3>
+
+        <ul>${actionsHTML}</ul>
+
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>04</span> RESULT</h3>
+
+        <p>${escapeHTML(project.result)}</p>
+
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>05</span> MY CONTRIBUTION</h3>
+
+        <p>${escapeHTML(project.contribution)}</p>
+
+      </div>
+
+      <div class="detail-block">
+
+        <h3><span>06</span> TOOLS</h3>
+
+        <div class="detail-tools">
+          ${toolsHTML}
+        </div>
+
+      </div>
+
+      ${project.externalLink ? `
+
+        <div class="detail-block">
+
+          <h3><span>↗</span> PORTFOLIO LINK</h3>
+
+          <a
+            class="project-external-link"
+            href="${escapeHTML(project.externalLink)}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore HR Design Portfolio ↗
+          </a>
+
+        </div>
+
+      ` : ""}
+
+    </div>
+
+  `;
+
+  projectModal.classList.remove("hidden");
+
+  document.body.style.overflow = "hidden";
+
+  $("#modal-close").focus();
+
+}
+
+function closeProject() {
+
+  projectModal.classList.add("hidden");
+
+  document.body.style.overflow = "";
+
+  if (previousFocus && typeof previousFocus.focus === "function") {
+    previousFocus.focus();
+  }
+
+}
+
+$("#project-grid").addEventListener("click",event => {
+
+  const card = event.target.closest(".project-card");
+
+  if (!card) return;
+
+  openProject(card.dataset.projectId);
+
+});
+
+$("#project-grid").addEventListener("keydown",event => {
+
+  if (event.key !== "Enter" && event.key !== " ") return;
+
+  const card = event.target.closest(".project-card");
+
+  if (!card) return;
+
+  event.preventDefault();
+
+  openProject(card.dataset.projectId);
+
+});
+
+$("#modal-close").addEventListener("click",closeProject);
+
+$("#modal-bottom-close").addEventListener("click",closeProject);
+
+$("#modal-overlay").addEventListener("click",closeProject);
+
+document.addEventListener("keydown",event => {
+
+  if (event.key === "Escape" && !projectModal.classList.contains("hidden")) {
+    closeProject();
+  }
+
+});
+
+
+/* ---------------------------------------
+   08. PHILOSOPHY INTERACTION
+--------------------------------------- */
+
+const philosophyResponses = {
+
+  a:
+    "면접 질문도 중요하지만, 지원자가 조직을 경험하는 방식은 질문만으로 결정되지 않습니다. 전형 전후의 안내와 소통까지 모두 채용 경험의 일부입니다.",
+
+  b:
+    "저는 지원자가 존중받았다고 느끼는 경험이 좋은 채용의 핵심이라고 생각합니다. 결과와 관계없이 모든 지원자가 조직에 대해 긍정적인 인상을 가질 수 있도록 세심한 운영이 필요합니다.",
+
+  c:
+    "결과 안내까지 걸리는 시간 역시 지원자 경험에 영향을 미칩니다. 정해진 일정에 맞춰 정확하고 신속하게 소통하는 것이 중요합니다."
+
+};
+
+document.querySelectorAll(".answer-button").forEach(button => {
+
+  button.addEventListener("click",() => {
+
+    document.querySelectorAll(".answer-button").forEach(item => {
+      item.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+
+    $("#philosophy-response").textContent =
+      philosophyResponses[button.dataset.answer];
+
+  });
+
+});
+
+
+/* ---------------------------------------
+   09. MOBILE NAVIGATION
+--------------------------------------- */
+
+const mobileMenuButton = $("#mobile-menu-button");
+
+const navLinks = $(".nav-links");
+
+mobileMenuButton.addEventListener("click",() => {
+
+  navLinks.classList.toggle("open");
+
+  mobileMenuButton.textContent =
+    navLinks.classList.contains("open") ? "×" : "☰";
+
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click",() => {
+
+    navLinks.classList.remove("open");
+
+    mobileMenuButton.textContent = "☰";
+
+  });
+
+});
+
+
+/* ---------------------------------------
+   10. SCROLL REVEAL
+--------------------------------------- */
+
+function initReveal() {
+
+  const revealTargets = document.querySelectorAll(
+    ".section-heading, .about-story, .timeline-card, " +
+    ".experience-item, .competency-intro>div, .project-card, " +
+    ".tool-card, .journey-step, .philosophy-heading, .value-item"
+  );
+
+  if (!("IntersectionObserver" in window)) {
+
+    revealTargets.forEach(target => {
+      target.classList.add("visible");
+    });
+
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },{
+    threshold:.12
+  });
+
+  revealTargets.forEach(target => {
+
+    target.classList.add("reveal");
+
+    observer.observe(target);
+
+  });
+
+}
+
+
+/* ---------------------------------------
+   11. INITIALIZATION
+--------------------------------------- */
+
+renderProjects();
+
+renderTools();
+
+const params = new URLSearchParams(location.search);
+
+const sharedColor = params.get("color");
+
+if (sharedColor) {
+
+  const color = getColorValue("#" + sharedColor);
+
+  if (color) {
+
+    colorInput.value = "#" + sharedColor;
+
+    showPortfolio(color,false);
+
+  }
+
+}
+
+</script>
+</body>
+</html>
+
+
+/* ---------------------------------------
+   07. PROJECT RENDERING
+--------------------------------------- */
+
+function renderProjects(filter="all") {
+
+  const filtered = filter === "all"
+    ? projects
+    : projects.filter(project => project.category === filter);
+
+  $("#project-grid").innerHTML = filtered.map(project => `
+
+    <article
+      class="project-card"
+      data-project-id="${escapeHTML(project.id)}"
+      tabindex="0"
+      role="button"
+      aria-label="${escapeHTML(project.title)} 상세 보기"
+    >
+
+      <div class="project-image">
+
+        <span class="project-index">${escapeHTML(project.number)}</span>
+
+        <div class="project-image-art">
+          ${escapeHTML(project.icon)}
+        </div>
+
+        <span class="project-category-label">
+          ${escapeHTML(project.categoryName)}
+        </span>
+
+      </div>
+
+      <div class="project-content">
+
+        <span class="project-type">
+          ${escapeHTML(project.organization)}
+        </span>
+
+        <h3>${escapeHTML(project.title)}</h3>
+
+        <p>${escapeHTML(project.subtitle)}</p>
+
+        <div class="project-result">
+          ${escapeHTML(project.highlight)}
+        </div>
+
+        <div class="project-card-bottom">
+
+          <span>${escapeHTML(project.role)} · ${escapeHTML(project.period)}</span>
+
+          <strong>↗</strong>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  `).join("");
+
+  $("#project-count").textContent =
+    `${filtered.length} PROJECT${filtered.length === 1 ? "" : "S"}`;
+
+}
+
+
+/* ---------------------------------------
+   08. PROJECT DETAIL MODAL
 --------------------------------------- */
 
 const modal = $("#project-modal");
 
 const modalContent = $("#modal-content");
 
-function openProject(id) {
+let previousFocus = null;
 
-  const project = projects.find(item => item.id === id);
+function openProject(projectId) {
+
+  const project = projects.find(item => item.id === projectId);
 
   if (!project) return;
 
@@ -2968,8 +2915,11 @@ function openProject(id) {
   const stats = project.stats.map(stat => `
 
     <div class="modal-stat">
+
       <strong>${escapeHTML(stat.value)}</strong>
+
       <span>${escapeHTML(stat.label)}</span>
+
     </div>
 
   `).join("");
@@ -2996,15 +2946,15 @@ function openProject(id) {
 
     <div class="detail-block">
 
-      <h3>RELATED PORTFOLIO</h3>
+      <h3>PROJECT LINK</h3>
 
-      <a class="project-external-link"
-         href="${escapeHTML(project.externalLink)}"
-         target="_blank"
-         rel="noopener noreferrer">
-
-         VIEW HR DESIGN PORTFOLIO ↗
-
+      <a
+        class="project-external-link"
+        href="${escapeHTML(project.externalLink)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Portfolio ↗
       </a>
 
     </div>
@@ -3016,30 +2966,27 @@ function openProject(id) {
     <div class="modal-hero">
 
       <span class="modal-category">
-        PROJECT ${escapeHTML(project.number)}
-        · ${escapeHTML(project.categoryName)}
+        ${escapeHTML(project.categoryName)}
       </span>
 
-      <h2 id="modal-title">
-        ${escapeHTML(project.title)}
-      </h2>
+      <h2>${escapeHTML(project.title)}</h2>
 
       <p>${escapeHTML(project.subtitle)}</p>
 
       <div class="modal-meta">
 
         <span>
-          ORGANIZATION
+          Organization
           <strong>${escapeHTML(project.organization)}</strong>
         </span>
 
         <span>
-          ROLE
+          Role
           <strong>${escapeHTML(project.role)}</strong>
         </span>
 
         <span>
-          PERIOD
+          Period
           <strong>${escapeHTML(project.period)}</strong>
         </span>
 
@@ -3150,6 +3097,30 @@ function closeProject() {
   }
 
 }
+
+$("#project-grid").addEventListener("click",event => {
+
+  const card = event.target.closest(".project-card");
+
+  if (!card) return;
+
+  openProject(card.dataset.projectId);
+
+});
+
+$("#project-grid").addEventListener("keydown",event => {
+
+  if (event.key !== "Enter" && event.key !== " ") return;
+
+  const card = event.target.closest(".project-card");
+
+  if (!card) return;
+
+  event.preventDefault();
+
+  openProject(card.dataset.projectId);
+
+});
 
 $("#modal-close").addEventListener("click",closeProject);
 
